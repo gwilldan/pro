@@ -16,7 +16,7 @@ const Navbar = () => {
       <header className="w-full bg-white absolute z-10 shadow-[0_4px_6px_-2px_rgba(0,0,0,0.03),0_12px_16px_-4px_rgba(0,0,0,0.08)]">
         <nav className=" mx-auto max-w-[1440px] flex justify-between items-center sm:px-16 px-4 h-[80px]">
           <Link href="/">
-            <h5 className="font-bold">LOGO</h5>
+            <h5 className="font-bold text-xl">LOGO</h5>
           </Link>
           <nav className="sm:flex hidden ml-48">
             <ul className="flex gap-5 text-base text-[#393A32]">

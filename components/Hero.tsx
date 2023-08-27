@@ -1,13 +1,10 @@
 "use client";
-
 import * as BsIcons from "react-icons/bs";
 import * as RxIcons from "react-icons/rx";
 import * as IoIcons from "react-icons/io";
-
 import * as PiIcons from "react-icons/pi";
-import Search  from "../components/Search";
+import Search from "../components/Search";
 import { IconContext } from "react-icons/lib/esm/iconContext";
-
 
 const Hero = () => {
   return (
@@ -22,7 +19,7 @@ const Hero = () => {
           <br className="flex sm:hidden" /> adipiscing elit.
         </p>
       </div>
-      <div className="sm:px-16 px-6 mt-20">
+      <div className="sm:px-16 px-4 mt-20">
         <div className="flex justify-between items-center px-3  border-b-[1px] border-[#F4F4F4] ">
           <div className="flex gap-10 text-base  text-secondary ">
             <h5>All Categories</h5>
@@ -76,7 +73,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div >
+          <div>
             <div className="flex justify-between items-baseline">
               <div className="my-8 flex gap-2">
                 <div className="flex bg-[#F4F4F4] py-2 pl-4 pr-3 gap-3 justify-center items-center w-[80px] rounded-lg shadow-[0_1px_2px_0px_rgba(0,0,0,0.06),0_1px_3px_0px_rgba(0,0,0,0.10)]">
