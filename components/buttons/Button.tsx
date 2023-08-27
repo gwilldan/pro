@@ -3,7 +3,7 @@ import { MouseEventHandler } from "react";
 const getVariant = (variant?: VariantType) => {
     switch (variant) {
       case "primary":
-        return "bg-[#181818] hover:bg-black text-white shadow shadow-violet-600/25 hover:shadow-violet-600/75";
+        return "bg-[#181818] hover:bg-black text-white shadow shadow-black-600/25 hover:shadow-black-600/75";
     
       case "outline-primary":
         return "bg-white text-black border border-black hover:text-white hover:bg-[#181818]";
@@ -45,8 +45,8 @@ const getVariant = (variant?: VariantType) => {
         className={`
    
           ${getVariant(variant)}  transition duration-75  ${
-          !paddingLess && "px-6 py-3 text-sm"
-        }  ${!square && "rounded-[5px]"} active:scale-95 ${className} `}
+          !paddingLess && "sm:px-6 sm:py-3 px-2 py-1  text-base"
+        }  ${!square && "rounded sm:rounded-[5px]"} active:scale-95 ${className} `}
       >
         {children}
       </button>
