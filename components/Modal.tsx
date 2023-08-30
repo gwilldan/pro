@@ -13,15 +13,12 @@ export default function Modal(): JSX.Element {
   function openModal(): void {
     setIsOpen(true);
   }
- 
 
   return (
     <>
-    
-       
-        <Button  onClick={openModal} type="button" variant="primary">Submit Design</Button>
-     
-    
+      <Button onClick={openModal} type="button" variant="primary">
+        Submit Design
+      </Button>
 
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
@@ -52,20 +49,50 @@ export default function Modal(): JSX.Element {
                   <Dialog.Title
                     as="h3"
                     className="text-lg font-medium leading-6 text-gray-900"
-                  >
-                   
-                    
-                  </Dialog.Title>
+                  ></Dialog.Title>
                   <div className="mt-2">
-                  <div className="flex justify-between items-center">
-                    <h4 className="px-6 ">Sign Up</h4>
-                    <h4 className="px-6">Login</h4>
-                  </div>
+                    <div className="flex justify-between items-center mb-[33px]">
+                      <h4 className="px-6 ">Sign Up</h4>
+                      <h4 className="px-6">Login</h4>
+                    </div>
+                    <form>
+                      <div className="mb-6">
+                        <label className="mb-2">
+                          Name<sup>*</sup>
+                        </label>
+                        <input
+                          className="h-[48px] outline-none w-[100%]  border-[1px] border-[#000000] rounded-lg"
+                          type="text"
+                        />
+                      </div>
+                      <div className="mb-6">
+                        <label className="mb-2">
+                          Email<sup>*</sup>
+                        </label>
+                        <input
+                          className="h-[48px] outline-none w-[100%]  border-[1px] border-[#000000] rounded-lg"
+                          type="text"
+                        />
+                      </div>
+                      <div className="mb-6">
+                        <label className="mb-2">
+                          Password<sup>*</sup>
+                        </label>
+                        <input
+                          className="h-[48px] outline-none w-[100%]  border-[1px] border-[#000000] rounded-lg"
+                          type="text"
+                        />
+                      </div>
+                      <div className="">
+                        <button className="w-[100%] h-[48px] bg-[#181818] text-white rounded mb-4">Sign Up</button>
+                        <button className="w-[100%] h-[48px] border-[1px] border-[#181818] text-[#181818] rounded mb-4">Sign Up with Google</button>
+                 
+                      </div>
+                      <h5 className="mt-8 text-center">Already have an account? <a>Login</a></h5>
+                    </form>
                   </div>
 
-                  <div className="mt-4">
-                    
-                  </div>
+                  <div className="mt-4"></div>
                 </Dialog.Panel>
               </Transition.Child>
             </div>
