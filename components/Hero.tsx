@@ -8,6 +8,8 @@ import Search from "./Search";
 import { IconContext } from "react-icons/lib/esm/iconContext";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import filter from "../assets/filter.svg"
+import Image from "next/image";
 
 const Hero: React.FC = () => {
   const [contentWidth, setContentWidth] = useState<number>(0);
@@ -47,13 +49,14 @@ const Hero: React.FC = () => {
           <br className="flex sm:hidden" /> adipiscing elit.
         </p>
       </div>
-      <div className=" sm:px-16 px-6 ">
+      <div className=" sm:px-16 px-4 ">
         <div className="sm:hidden flex justify-between items-center w-[100%] my-8 ">
-          <div className="w-[82%] h-[40px]  border-[1px] border-[#F4F4F4] rounded-[8px] pl-3 shadow-[0_1px_2px_0px_rgba(0,0,0,0.06),0_1px_3px_0px_rgba(0,0,0,0.10)]">
+          <div className="w-[85%] h-[40px]  border-[1px] border-[#F4F4F4] rounded-[8px] pl-3 shadow-[0_1px_2px_0px_rgba(0,0,0,0.06),0_1px_3px_0px_rgba(0,0,0,0.10)]">
             <input className="w-[100%] h-[100%] outline-none  " type="text" />
           </div>
           <div className="w-[12%] h-[40px]  border-[1px] border-[#F4F4F4] rounded-[8px]  shadow-[0_1px_2px_0px_rgba(0,0,0,0.06),0_1px_3px_0px_rgba(0,0,0,0.10)] flex justify-center items-center">
-            <IconContext.Provider value={{size:'24px'}}><BsIcons.BsFilter /></IconContext.Provider>
+           <Image src={filter} width={24} height={24} alt="filter"/>
+            
           </div>
         </div>
         <div className="flex sm:hidden">
