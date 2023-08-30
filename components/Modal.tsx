@@ -59,7 +59,7 @@ export default function Modal(): JSX.Element {
                   <div className="mt-2">
                   <div className="flex justify-between items-center">
                     <h4 className="px-6 ">Sign Up</h4>
-                    <h4>Login</h4>
+                    <h4 className="px-6">Login</h4>
                   </div>
                   </div>
 
