@@ -62,7 +62,7 @@ export default function Modal(): JSX.Element {
                           Name<sup>*</sup>
                         </label>
                         <input
-                          className="sm:h-[48px] h-[42px] outline-none w-[100%]  border-[1px] border-[#000000] rounded-lg"
+                          className="sm:h-[48px] h-[42px] pl-2 outline-none w-[100%]  border-[1px] border-[#000000] rounded-lg"
                           type="text"
                         />
                       </div>
@@ -71,7 +71,7 @@ export default function Modal(): JSX.Element {
                           Email<sup>*</sup>
                         </label>
                         <input
-                          className="h-[48px] outline-none w-[100%]  border-[1px] border-[#000000] rounded-lg"
+                       className="sm:h-[48px] h-[42px] pl-2 outline-none w-[100%]  border-[1px] border-[#000000] rounded-lg"
                           type="text"
                         />
                       </div>
@@ -80,7 +80,7 @@ export default function Modal(): JSX.Element {
                           Password<sup>*</sup>
                         </label>
                         <input
-                          className="h-[48px] outline-none w-[100%]  border-[1px] border-[#000000] rounded-lg"
+                    className="sm:h-[48px] h-[42px] pl-2 outline-none w-[100%]  border-[1px] border-[#000000] rounded-lg"
                           type="text"
                         />
                       </div>
