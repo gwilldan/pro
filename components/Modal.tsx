@@ -57,7 +57,7 @@ export default function Modal(): JSX.Element {
                     
                     </div>
                     <form>
-                      <div className="mb-6">
+                      <div className="sm:mb-6 mb-4">
                         <label className="mb-2 text-base">
                           Name<sup>*</sup>
                         </label>
@@ -66,7 +66,7 @@ export default function Modal(): JSX.Element {
                           type="text"
                         />
                       </div>
-                      <div className="mb-6">
+                      <div className="sm:mb-6 mb-4">
                         <label className="mb-2 text-base">
                           Email<sup>*</sup>
                         </label>
@@ -75,7 +75,7 @@ export default function Modal(): JSX.Element {
                           type="text"
                         />
                       </div>
-                      <div className="mb-6">
+                      <div className="sm:mb-6 mb-4">
                         <label className="mb-2 text-base">
                           Password<sup>*</sup>
                         </label>
@@ -89,7 +89,7 @@ export default function Modal(): JSX.Element {
                         <button className="w-[100%] text-lg h-[48px] border-[1px] border-[#181818] text-[#181818] rounded mb-4">Sign Up with Google</button>
                  
                       </div>
-                      <h5 className="mt-8 text-center text-base">Already have an account? <a>Login</a></h5>
+                      <h5 className="sm:mt-8 mt-6 text-center text-base">Already have an account? <a>Login</a></h5>
                     </form>
                   </div>
 
