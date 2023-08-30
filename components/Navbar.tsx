@@ -6,7 +6,8 @@ import { IconContext } from "react-icons";
 import { useState } from "react";
 import { Button } from "./buttons/Button";
 import Modal from '@/components/Modal'
-
+import menu from "../assets/menu.svg"
+import Image from "next/image";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenDrop, setIsOpenDrop] = useState(false);
@@ -101,7 +102,7 @@ const Navbar = () => {
 
             <div className="sm:hidden flex">
               <IconContext.Provider value={{ size: "32px" }}>
-                <FiIcons.FiMenu />
+              <Image src={menu} width={32} height={32} alt="menu"/>
               </IconContext.Provider>
             </div>
           </div>
