@@ -2,6 +2,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { Button } from "./buttons/Button";
+import MyTabs from "./Tab";
 
 export default function Modal(): JSX.Element {
   let [isOpen, setIsOpen] = useState<boolean>(false);
@@ -50,48 +51,7 @@ export default function Modal(): JSX.Element {
                     as="h3"
                     className="text-lg font-medium leading-6 text-gray-900"
                   ></Dialog.Title>
-                  <div className="mt-2">
-                    <div className="flex justify-between items-center mb-[33px]">
-                      <h4 className="px-6 text-base ">Sign Up</h4>
-                      <h4 className="px-6 text-base">Login</h4>
-                    
-                    </div>
-                    <form>
-                      <div className="sm:mb-6 mb-4">
-                        <label className="mb-2 text-base">
-                          Name<sup>*</sup>
-                        </label>
-                        <input
-                          className="sm:h-[48px] h-[42px] pl-2 outline-none w-[100%]  border-[1px] border-[#000000] rounded-lg"
-                          type="text"
-                        />
-                      </div>
-                      <div className="sm:mb-6 mb-4">
-                        <label className="mb-2 text-base">
-                          Email<sup>*</sup>
-                        </label>
-                        <input
-                       className="sm:h-[48px] h-[42px] pl-2 outline-none w-[100%]  border-[1px] border-[#000000] rounded-lg"
-                          type="text"
-                        />
-                      </div>
-                      <div className="sm:mb-6 mb-4">
-                        <label className="mb-2 text-base">
-                          Password<sup>*</sup>
-                        </label>
-                        <input
-                    className="sm:h-[48px] h-[42px] pl-2 outline-none w-[100%]  border-[1px] border-[#000000] rounded-lg"
-                          type="text"
-                        />
-                      </div>
-                      <div className="">
-                        <button className="w-[100%] text-lg h-[48px] bg-[#181818] text-white rounded mb-4">Sign Up</button>
-                        <button className="w-[100%] text-lg h-[48px] border-[1px] border-[#181818] text-[#181818] rounded mb-4">Sign Up with Google</button>
-                 
-                      </div>
-                      <h5 className="sm:mt-8 mt-6 text-center text-base">Already have an account? <a>Login</a></h5>
-                    </form>
-                  </div>
+                  <MyTabs />
 
                   <div className="mt-4"></div>
                 </Dialog.Panel>
