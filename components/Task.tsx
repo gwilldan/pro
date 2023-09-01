@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import axios from "axios";
 import { DesignProps } from "../types";
 import { Button } from "./buttons/Button";
-import CustomButton from "./CustomButton";
 
 const Task = () => {
   const router = useRouter();
@@ -86,20 +85,20 @@ const Task = () => {
                       </div>
                     </div>
                     <div className="flex  gap-3 ">
-                      <CustomButton
-                        title="More info"
-                        btnType="button"
-                        handleClick={() => console.log("Hello")}
-                        containerStyles="border border-black "
-                      />
-                      <CustomButton
-                        title="Join Challenges"
-                        btnType="button"
-                        containerStyles="bg-black text-white"
-                        handleClick={() =>
-                          router.push(`/design-details/${task.id}`)
-                        }
-                      />
+                      <Button
+                        variant="outline-primary"
+                        onClick={() => console.log("More info btn clicked")}
+                      >
+                        More info
+                      </Button>
+                      <Button
+                        variant="primary"
+                        onClick={() => {
+                          router.push(`/design-details/${task.id}`);
+                        }}
+                      >
+                        Join challenges
+                      </Button>
                       {/* <Button /> */}
                     </div>
                   </div>
