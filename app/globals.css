@@ -48,8 +48,9 @@ body {
 }
 .nav-menu.active{
   right: 0;
-  transition: 0.2s ease-in;`
+  transition: 0.2s ease-in;
 }
+
 .nav-items {
   border: 1px solid grey;
   padding-top: 20px;
