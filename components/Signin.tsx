@@ -1,4 +1,5 @@
-
+import Image from "next/image"
+import goggle from "../assets/google.png"
 const Signin = () => {
   return (
     <div>  <div className="mt-2">
@@ -35,8 +36,9 @@ const Signin = () => {
         <button className="w-[100%] text-lg h-[48px] bg-[#181818] text-white rounded mb-4">
           Sign Up
         </button>
-        <button className="w-[100%] text-lg h-[48px] border-[1px] border-[#181818] text-[#181818] rounded mb-4">
-          Sign Up with Google
+        <button className="w-[100%] flex justify-center gap-[11px] items-center text-lg h-[48px] border-[1px] border-[#181818] text-[#181818] rounded ">
+          <Image src={goggle} width={16} height={16} alt="google" />
+      <h5>    Sign Up with Google</h5>
         </button>
       </div>
       <h5 className="sm:mt-8 mt-6 text-center text-base">

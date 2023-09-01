@@ -96,7 +96,7 @@ const Navbar = () => {
           </nav>
           <div className="flex sm:gap-4 gap-6 items-center">
             <div className="sm:flex hidden ">
-              <Button type="button" variant="outline-primary">Donate</Button>
+              <Button type="button" variant="outline-primary">Get Started</Button>
             </div>
             <Modal/>
 
