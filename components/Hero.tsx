@@ -60,7 +60,7 @@ const Hero: React.FC = () => {
             
           </div>
         </div>
-        <div className="flex sm:hidden">
+        <div className="flex md:hidden">
           <motion.div>
             <motion.div className="w-[1125px] flex cursor-grab  overflow-hidden">
               <motion.div
@@ -83,8 +83,8 @@ const Hero: React.FC = () => {
           </motion.div>
         </div>
       </div>
-      <div className="sm:flex hidden">
-      <div className="sm:px-16 px-6 mt-20">
+      <div className="md:flex hidden">
+      <div className="md:px-16 px-6 mt-20">
         <div className="flex justify-between items-center px-3  border-b-[1px] border-[#F4F4F4] ">
           <div className="flex gap-10 text-base  text-secondary ">
             <h5>All Categories</h5>

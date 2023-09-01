@@ -1,25 +1,28 @@
 "use client";
 import Link from "next/link";
-import * as FiIcons from "react-icons/fi";
-import * as PiIcons from "react-icons/pi";
-import { IconContext } from "react-icons";
+import Image from "next/image";
 import { useState } from "react";
 import { Button } from "./buttons/Button";
-import Modal from '@/components/Modal'
-import menu from "../assets/menu.svg"
-import Image from "next/image";
-const Navbar = () => {
+import Modal from "@/components/Modal";
+import menu from "../assets/menu.svg";
+import * as FiIcons from "react-icons/fi";
+import * as PiIcons from "react-icons/pi";
+
+const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenDrop, setIsOpenDrop] = useState(false);
+  const [navbar, setNavbar] = useState(false);
+
+  const showSidebar = () => setNavbar(!navbar);
 
   return (
     <div>
       <header className="w-full bg-white absolute z-10 shadow-[0_4px_6px_-2px_rgba(0,0,0,0.03),0_12px_16px_-4px_rgba(0,0,0,0.08)]">
-        <nav className=" mx-auto max-w-[1440px] flex justify-between items-center sm:px-16 px-4 h-[80px]">
+        <nav className="mx-auto max-w-[1440px] flex justify-between items-center sm:px-16 px-4 h-[80px]">
           <Link href="/">
             <h5 className="font-bold text-xl">LOGO</h5>
           </Link>
-          <nav className="sm:flex hidden ml-48">
+          <nav className="md:flex hidden ml-48">
             <ul className="flex gap-5 text-base text-[#393A32]">
               <li className=" cursor-pointer ">
                 <Link href="/">Design Tasks</Link>
@@ -94,20 +97,36 @@ const Navbar = () => {
               </div>
             </ul>
           </nav>
-          <div className="flex sm:gap-4 gap-6 items-center">
-            <div className="sm:flex hidden ">
-              <Button type="button" variant="outline-primary">Get Started</Button>
+          <div className="flex md:gap-4 gap-6 items-center">
+            <div className="md:flex hidden">
+              <Button type="button" variant="outline-primary">
+                Get Started
+              </Button>
             </div>
-            <Modal/>
+            <Modal />
 
-            <div className="sm:hidden flex">
-              <IconContext.Provider value={{ size: "32px" }}>
-              <Image src={menu} width={32} height={32} alt="menu"/>
-              </IconContext.Provider>
+            <div className="md:hidden flex" onClick={showSidebar}>
+              <Image src={menu} width={32} height={32} alt="menu" />
             </div>
           </div>
         </nav>
       </header>
+
+      
+      {navbar && (
+        <div
+          className={`fixed right-0 top-0 z-[999] h-full w-[300px] bg-[#f4f4f4] transform transition-opacity duration-300 opacity-100 ${
+            navbar ? "translate-x-0" : "translate-x-full opacity-0"
+          }`}
+        >
+          <div className="flex justify-end p-4">
+            <button onClick={showSidebar}>Close</button>
+          </div>
+          <nav>
+            {/* Add your mobile navigation links here */}
+          </nav>
+        </div>
+      )}
     </div>
   );
 };
