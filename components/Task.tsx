@@ -5,29 +5,12 @@ import { useRouter } from "next/navigation";
 import axios from "axios";
 import { DesignProps } from "../types";
 import { Button } from "./buttons/Button";
+import TaskSkeleton from "./cards/TaskSkeleton";
 
 const Task = () => {
   const router = useRouter();
-
-  const [data, setData] = useState<DesignProps[]>([
-    {
-      id: "",
-      title: "",
-      image: "",
-      shortDescription: "",
-      requirements: [""],
-      constraints: [""],
-      resources: [""],
-      timeline: [""],
-      weeklyTasks: [
-        {
-          id: "",
-          week: "",
-          designId: "",
-        },
-      ],
-    },
-  ]);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [data, setData] = useState<DesignProps[]>([]);
 
   const fetchDesigns = async () => {
     try {
@@ -42,36 +25,41 @@ const Task = () => {
   useEffect(() => {
     fetchDesigns();
   }, []);
+  useEffect(() => {
+    console.log(data);
+  });
   return (
     <div>
       <div className="sm:px-16 px-6  max-w-[1440px] mx-auto">
         <div className=" flex justify-between flex-wrap  items-start">
-          {data.map((task) => {
-            return (
-              <div className="" key={task.id}>
-                <div
-                  className={`p-8 bg-[#ffffff] shadow-[0_32px_64px_-12px_rgba(0,0,0,0.14)] rounded-[18px] my-6 ${task.title}`}
-                >
-                  <div>
-                    <div className="flex text-[25px] text-secondary mb-3">
-                      <AiIcons.AiFillStar />
-                      <AiIcons.AiFillStar />
-                      <AiIcons.AiFillStar />
-                      <AiIcons.AiFillStar />
-                      <AiIcons.AiFillStar />
+          {data.length < 1 && <TaskSkeleton />}
+          {data.length > 0 &&
+            data.map((task) => {
+              return (
+                <div className="" key={task.id}>
+                  <div
+                    className={`p-8 bg-[#ffffff] shadow-[0_32px_64px_-12px_rgba(0,0,0,0.14)] rounded-[18px] my-6 ${task.title}`}
+                  >
+                    <div>
+                      <div className="flex text-[25px] text-secondary mb-3">
+                        <AiIcons.AiFillStar />
+                        <AiIcons.AiFillStar />
+                        <AiIcons.AiFillStar />
+                        <AiIcons.AiFillStar />
+                        <AiIcons.AiFillStar />
+                      </div>
                     </div>
-                  </div>
-                  <h2 className="font-bold text-[30px] text-secondary w-[500px] leading-[35px] ">
-                    {task.title}
-                  </h2>
-                  <p className="text-[18px] w-[500px] my-6">
-                    {task.shortDescription}
-                  </p>
-                  <div className="flex items-center gap-8 ">
-                    <div className="flex items-center gap-4">
-                      <div className="w-[51px] h-[51px] rounded-full bg-black"></div>
-                      <div className="">
-                        {/* <h4 className="font-bold text-secondary text-[16px]">
+                    <h2 className="font-bold text-[30px] text-secondary w-[500px] leading-[35px] ">
+                      {task.title}
+                    </h2>
+                    <p className="text-[18px] w-[500px] my-6">
+                      {task.shortDescription}
+                    </p>
+                    <div className="flex items-center gap-8 ">
+                      <div className="flex items-center gap-4">
+                        <div className="w-[51px] h-[51px] rounded-full bg-black"></div>
+                        <div className="">
+                          {/* <h4 className="font-bold text-secondary text-[16px]">
                           {task.creator}
                         </h4>
                         <div className="flex flex-row gap-2 items-center ">
@@ -82,30 +70,30 @@ const Task = () => {
                             {task.tag2}
                           </h4>
                         </div> */}
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex  gap-3 ">
-                      <Button
-                        variant="outline-primary"
-                        onClick={() => console.log("More info btn clicked")}
-                      >
-                        More info
-                      </Button>
-                      <Button
-                        variant="primary"
-                        onClick={() => {
-                          router.push(`/design-details/${task.id}`);
-                        }}
-                      >
-                        Join challenges
-                      </Button>
-                      {/* <Button /> */}
+                      <div className="flex  gap-3 ">
+                        <Button
+                          variant="outline-primary"
+                          onClick={() => console.log("More info btn clicked")}
+                        >
+                          More info
+                        </Button>
+                        <Button
+                          variant="primary"
+                          onClick={() => {
+                            router.push(`/design-details/${task.id}`);
+                          }}
+                        >
+                          Join challenges
+                        </Button>
+                        {/* <Button /> */}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
         </div>
       </div>
     </div>
