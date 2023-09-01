@@ -10,7 +10,7 @@ function MyTabs() {
         <Tab as={Fragment}>
           {({ selected }) => (
             <button
-            className={selected ? "border-b-[2px] border-black px-6 w-[100%]" : "px-6 text-base w-[100%]"}
+            className={selected ? "border-b-[2px] border-black py-3 px-6 w-[100%]" : "px-6 py-3  text-base w-[100%]"}
             >
               Sign Up
             </button>
@@ -19,7 +19,7 @@ function MyTabs() {
         <Tab as={Fragment}>
           {({ selected }) => (
             <button
-              className={selected ? "border-b-[2px] border-black px-6 w-[100%]" : "px-6 text-base w-[100%]"}
+              className={selected ? "border-b-[2px] border-black py-3  px-6 w-[100%]" : "px-6 py-3  text-base w-[100%]"}
             >
               Login
             </button>
