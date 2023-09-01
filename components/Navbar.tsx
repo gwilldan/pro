@@ -115,9 +115,8 @@ const Navbar: React.FC = () => {
       
       {navbar && (
         <div
-          className={`fixed right-0 top-0 z-[999] h-full w-[300px] bg-[#f4f4f4] transform transition-opacity duration-300 opacity-100 ${
-            navbar ? "translate-x-0" : "translate-x-full opacity-0"
-          }`}
+        className={`fixed right-0 top-[80px] h-full w-[80%] bg-[#f4f4f4] transform transition-transform duration-500 ease-in opacity-100 ${
+          navbar ? "translate-x-0" : "translate-x-full opacity-0"}`}
         >
           <div className="flex justify-end p-4">
             <button onClick={showSidebar}>Close</button>
