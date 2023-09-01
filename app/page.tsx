@@ -1,11 +1,11 @@
-import Hero from "@/components/Hero";
-import Task from "@/components/Task";
+import Hero from "@/components/Hero"
 
 export default function Home() {
   return (
     <div className="overflow-hidden">
-      <Hero />
-      <Task />
+      <Hero/>
+      
+
     </div>
-  );
+  )
 }
