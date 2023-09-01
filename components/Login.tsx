@@ -34,11 +34,11 @@ const Login = () => {
         </button>
 
         </div>
-        <h5 className="sm:mt-8 mt-6 text-center text-base">
+        <h5 className="sm:mt-8 mt-6 text-center text-base underline">
     Forgot your password?
         </h5>
         <h5 className="sm:mt-4 mt-2 text-center text-base">
-          Don't have an account? <a>Sign Up</a>
+          Don't have an account? <a href="#" className="underline">Sign Up</a>
         </h5>
       </form>
     </div></div>
