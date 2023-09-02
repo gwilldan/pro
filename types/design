@@ -1,0 +1,19 @@
+// export interface DesignProps {
+//   id: string;
+//   title: string;
+//   image: string;
+//   shortDescription: string;
+//   requirements: string[];
+//   constraints: string[];
+//   resources: string[];
+//   timeline: string[];
+//   weeklyTasks: WeeklyTask[];
+// }
+
+// export interface WeeklyTask {
+//   id: string;
+//   week: string;
+//   designId: string;
+// }
+
+// export const [DesignProps, WeeklyTask];

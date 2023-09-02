@@ -8,8 +8,6 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-
-
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -19,7 +17,43 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+.nav-menu {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: -120%;
+  background-color: black;
+  width: 70vw;
+  height: 100vh;
+  z-index: 999;
+  transition: 250ms ease-in;
+}
+.nav-menu.active {
+  right: 0;
+  transition: 0.2s ease-in;
+}
+.nav-items {
+  border: 1px solid grey;
+  padding-top: 20px;
+  padding-left: 5px;
+  border-left: 0;
+  border-right: 0;
+  font-size: 12px;
+  font-weight: 100;
+  margin-top: 5px;
+}
 
+@layer utilities {
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
 
-
- 
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+}
