@@ -9,7 +9,7 @@ export default function Submission() {
 
 
   // BUTTON DATA AND STATES
-  const [isClicked, setIsClicked] = useState(1)
+  const [isClicked, setIsClicked] = useState<number>(1)
   
           // THE SECTION CARD ANIMATION CONTROLS
   const butt = [
@@ -78,7 +78,7 @@ export default function Submission() {
                 <div className=" my-5 flex gap-5 mx-auto w-max">
                   <motion.button 
                     className=" w-[150px] font-light px-10 py-2 border border-black rounded-md"
-                    onClick = {isClicked >=2 ? () => setIsClicked(isClicked - 1) : ""}
+                    onClick = {isClicked >=2 ? (Value:string) => setIsClicked(isClicked - 1) : ""}
                     initial ={{
                         scale: 1
                     }}
