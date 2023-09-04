@@ -1,9 +1,7 @@
 
 import { motion } from "framer-motion"
-import CustomButton from "@/components/CustomButton"
 import Select from "react-select"
 
-import TextEditor from "./TextEditor"
 import 'quill/dist/quill.snow.css'
 import ReactQuill from 'react-quill'
 
