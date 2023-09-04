@@ -78,7 +78,7 @@ export default function Submission() {
                 <div className=" my-5 flex gap-5 mx-auto w-max">
                   <motion.button 
                     className=" w-[150px] font-light px-10 py-2 border border-black rounded-md"
-                    onClick = {isClicked >=2 ? (Value:string) => setIsClicked(isClicked - 1) : ""}
+                    onClick = {() => {isClicked >=2 ? () => setIsClicked(isClicked - 1) : ""}}
                     initial ={{
                         scale: 1
                     }}
@@ -91,7 +91,7 @@ export default function Submission() {
 
                   <motion.button 
                     className=" w-[150px] font-light px-10 py-2 border bg-black text-white rounded-md" 
-                    onClick = {isClicked <= 3 ? (Value:string) => setIsClicked(isClicked + 1) : prompt("SUBMITTED")}
+                    onClick = {() => {isClicked <= 3 ? () => setIsClicked(isClicked + 1) : prompt("SUBMITTED")}}
                     initial ={{
                         scale: 1
                     }}
