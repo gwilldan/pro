@@ -1,10 +1,8 @@
 'use client'
-import { Form } from "@/node_modules/react-router-dom/dist/index"
 import React, { useState } from "react"
 import {form} from './sub-components/data'
 import {MainInfo, Contributors, Preview } from "./sub-components/index"
 import {motion} from "framer-motion"
-import man from "../../assets/man.jpeg"
 
 
 export default function Submission() {
