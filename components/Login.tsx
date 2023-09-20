@@ -1,11 +1,39 @@
+"use client";
+
+import React, { ChangeEventHandler, FormEventHandler, useState } from "react";
+import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import Alert from "@/components/Alerts";
 import goggle from "../assets/google.png"
 import Image from "next/image";
 const Login = () => {
+  const router = useRouter();
+  const [error, setError] = useState("");
+  const [userInfo, setUserInfo] = useState({
+    email: "",
+    password: "",
+  });
+  const { email, password } = userInfo;
+
+  const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
+    e.preventDefault();
+    const res = await signIn("credentials", {
+      email,
+      password,
+      redirect: false,
+    });
+    if (res?.error) return setError(res.error);
+    router.replace("/profile");
+  };
     return (
       <div>  <div className="mt-2">
       
-      <form>
-     
+      <form onSubmit={handleSubmit}>
+      {error ? (
+            <div>
+              <Alert/>
+            </div>
+          ):null}
         <div className="sm:mb-6 mb-4">
           <label className="mb-2 text-base">
             Email<sup>*</sup>
@@ -13,6 +41,10 @@ const Login = () => {
           <input
             className="sm:h-[48px] h-[42px] pl-2 outline-none w-[100%]  border-[1px] border-[#000000] rounded-lg"
             type="text"
+             value={email}
+              onChange={({ target }) =>
+                setUserInfo({ ...userInfo, email: target.value })
+              }
           />
         </div>
         <div className="sm:mb-6 mb-4">
@@ -22,6 +54,10 @@ const Login = () => {
           <input
             className="sm:h-[48px] h-[42px] pl-2 outline-none w-[100%]  border-[1px] border-[#000000] rounded-lg"
             type="text"
+            value={password}
+            onChange={({ target }) =>
+              setUserInfo({ ...userInfo, password: target.value })
+            }
           />
         </div>
         <div className="">

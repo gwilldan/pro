@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 
 import { Roboto } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import AuthProvider from "@/components/AuthProvider";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -10,8 +11,10 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Explore Design Challenges | Find Creative Challenges to Enhance Your Skills",
-  description: "Discover a wide range of design challenges to fuel your creativity. Join our community and take part in exciting projects that sharpen your design skills. Get inspired and showcase your talent",
+  title:
+    "Explore Design Challenges | Find Creative Challenges to Enhance Your Skills",
+  description:
+    "Discover a wide range of design challenges to fuel your creativity. Join our community and take part in exciting projects that sharpen your design skills. Get inspired and showcase your talent",
 };
 
 export default function RootLayout({
@@ -21,11 +24,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
-        <Navbar />
+      <AuthProvider>
+        <body className={roboto.className}>
+          <Navbar />
 
-        {children}
-      </body>
+          {children}
+        </body>
+      </AuthProvider>
     </html>
   );
 }
