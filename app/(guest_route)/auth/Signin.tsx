@@ -1,7 +1,7 @@
 "use client"
 import React, { ChangeEventHandler, FormEventHandler, useState } from "react";
 import Image from "next/image"
-import goggle from "../assets/google.png"
+import goggle from "../../../assets/google.png"
 const Signin = () => {
   const [userInfo, setUserInfo] = useState({
     name: "",

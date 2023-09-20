@@ -4,7 +4,7 @@ import React, { ChangeEventHandler, FormEventHandler, useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Alert from "@/components/Alerts";
-import goggle from "../assets/google.png"
+import goggle from "../../../assets/google.png"
 import Image from "next/image";
 const Login = () => {
   const router = useRouter();

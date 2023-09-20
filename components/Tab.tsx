@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Tab } from "@headlessui/react";
-import Signin from "./Signin";
-import Login from "./Login";
+import Signin from "../app/(guest_route)/auth/Signin";
+import Login from "../app/(guest_route)/auth/Login";
 
 function MyTabs() {
   return (
