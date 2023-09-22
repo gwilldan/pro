@@ -23,7 +23,7 @@ const Login = () => {
       redirect: false,
     });
     if (res?.error) return setError(res.error);
-    router.replace("/profile");
+    router.replace("/submission");
   };
     return (
       <div>  <div className="mt-2">
