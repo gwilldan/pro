@@ -7,7 +7,7 @@ import Modal from "@/components/Modal";
 import menu from "../assets/menu.svg";
 import * as FiIcons from "react-icons/fi";
 import * as PiIcons from "react-icons/pi";
-import AuthProfileMenu from "./AuthProfileMenu";
+
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -96,7 +96,7 @@ const Navbar: React.FC = () => {
                   </div>
                 )}
               </div>
-              <li><AuthProfileMenu/></li>
+              
             </ul>
           </nav>
           <div className="flex md:gap-4 gap-6 items-center">
