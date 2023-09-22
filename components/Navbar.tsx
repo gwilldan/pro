@@ -8,7 +8,6 @@ import menu from "../assets/menu.svg";
 import * as FiIcons from "react-icons/fi";
 import * as PiIcons from "react-icons/pi";
 
-
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenDrop, setIsOpenDrop] = useState(false);
@@ -96,7 +95,6 @@ const Navbar: React.FC = () => {
                   </div>
                 )}
               </div>
-              
             </ul>
           </nav>
           <div className="flex md:gap-4 gap-6 items-center">
@@ -105,7 +103,9 @@ const Navbar: React.FC = () => {
                 Get Started
               </Button>
             </div>
-            <Modal />
+            <Button type="button" variant="primary">
+              <Link href="/submission">Submit Design</Link>
+            </Button>
 
             <div className="md:hidden flex" onClick={showSidebar}>
               <Image src={menu} width={32} height={32} alt="menu" />
@@ -114,18 +114,16 @@ const Navbar: React.FC = () => {
         </nav>
       </header>
 
-      
       {navbar && (
         <div
-        className={`fixed right-0 top-[80px] h-full w-[80%] bg-[#f4f4f4] transform transition-transform duration-500 ease-in opacity-100 ${
-          navbar ? "translate-x-0" : "translate-x-full opacity-0"}`}
+          className={`fixed right-0 top-[80px] h-full w-[80%] bg-[#f4f4f4] transform transition-transform duration-500 ease-in opacity-100 ${
+            navbar ? "translate-x-0" : "translate-x-full opacity-0"
+          }`}
         >
           <div className="flex justify-end p-4">
             <button onClick={showSidebar}>Close</button>
           </div>
-          <nav>
-            {/* Add your mobile navigation links here */}
-          </nav>
+          <nav>{/* Add your mobile navigation links here */}</nav>
         </div>
       )}
     </div>

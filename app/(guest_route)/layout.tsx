@@ -7,6 +7,6 @@ interface Props{
 }
 export default async function PrivateLayout ({children}:Props){
     const session = await getServerSession(authOptions) 
-    if(!session) redirect("/profile")
+    if(!session) redirect("/submission")
     return<>{children}</>
 }
