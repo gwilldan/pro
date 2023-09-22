@@ -107,7 +107,7 @@ const Navbar: React.FC = () => {
               <Link href="/submission">Submit Design</Link>
             </Button>
 
-            <div className="md:hidden flex" onClick={showSidebar}>
+            <div className="md:hidden flex cursor-pointer" onClick={showSidebar}>
               <Image src={menu} width={32} height={32} alt="menu" />
             </div>
           </div>
@@ -123,7 +123,79 @@ const Navbar: React.FC = () => {
           <div className="flex justify-end p-4">
             <button onClick={showSidebar}>Close</button>
           </div>
-          <nav>{/* Add your mobile navigation links here */}</nav>
+          <nav className="px-4"> <ul className="flex flex-col gap-5 text-base text-[#393A32]">
+              <li className=" cursor-pointer ">
+                <Link href="/">Design Tasks</Link>
+              </li>
+              <li className=" cursor-pointer ">
+                <Link href="./casestudies">Casestudies</Link>
+              </li>
+              <li className=" cursor-pointer ">
+                <Link href="./Jobs">Job Board</Link>
+              </li>
+              <div className="relative cursor-pointer   ">
+                <div
+                  className="flex items-center gap-1   "
+                  onClick={() => setIsOpen((prev) => !prev)}
+                >
+                  <h6>Resources</h6>
+                  {!isOpen ? (
+                    <PiIcons.PiCaretDownBold />
+                  ) : (
+                    <PiIcons.PiCaretUpBold />
+                  )}
+                </div>
+                {isOpen && (
+                  <div className="absolute bg-white shadow-[0_4px_6px_-2px_rgba(0,0,0,0.3)] rounded-[4px] top-[54px] left-[-50%]  flex col items-start p-2 w-[200px]">
+                    <div className="w-full flex flex-col">
+                      <div className="hover:bg-blue-300 cursor-pointer border-l-transparent hover:border-l-white border-l-4 w-full ">
+                        <h6>1</h6>
+                      </div>
+                      <div className="hover:bg-blue-300 cursor-pointer border-l-transparent hover:border-l-white border-l-4 w-full ">
+                        <h6>1</h6>
+                      </div>
+                      <div className="hover:bg-blue-300 cursor-pointer border-l-transparent hover:border-l-white border-l-4 w-full ">
+                        <h6>1</h6>
+                      </div>
+                      <div className="hover:bg-blue-300 cursor-pointer border-l-transparent hover:border-l-white border-l-4 w-full ">
+                        <h6>1</h6>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div className="relative cursor-pointer    ">
+                <div
+                  className="flex items-center gap-1   "
+                  onClick={() => setIsOpenDrop((prev) => !prev)}
+                >
+                  <h6>More</h6>
+                  {!isOpenDrop ? (
+                    <PiIcons.PiCaretDownBold />
+                  ) : (
+                    <PiIcons.PiCaretUpBold />
+                  )}
+                </div>
+                {isOpenDrop && (
+                  <div className="absolute bg-white shadow-[0_4px_6px_-2px_rgba(0,0,0,0.3)] rounded-[4px] top-[54px] left-[-50%]  flex col items-start p-2 w-[200px]">
+                    <div className="w-full flex flex-col">
+                      <div className="hover:bg-blue-300 cursor-pointer border-l-transparent hover:border-l-white border-l-4 w-full ">
+                        <h6>1</h6>
+                      </div>
+                      <div className="hover:bg-blue-300 cursor-pointer border-l-transparent hover:border-l-white border-l-4 w-full ">
+                        <h6>1</h6>
+                      </div>
+                      <div className="hover:bg-blue-300 cursor-pointer border-l-transparent hover:border-l-white border-l-4 w-full ">
+                        <h6>1</h6>
+                      </div>
+                      <div className="hover:bg-blue-300 cursor-pointer border-l-transparent hover:border-l-white border-l-4 w-full ">
+                        <h6>1</h6>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </ul></nav>
         </div>
       )}
     </div>
