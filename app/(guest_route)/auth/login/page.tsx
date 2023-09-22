@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import Alert from "@/components/Alerts";
 import goggle from "../../../assets/google.png"
 import Image from "next/image";
-const Login = () => {
+const page = () => {
   const router = useRouter();
   const [error, setError] = useState("");
   const [userInfo, setUserInfo] = useState({
@@ -81,4 +81,4 @@ const Login = () => {
     )
   }
   
-  export default Login
+  export default page
