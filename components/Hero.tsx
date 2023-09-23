@@ -67,7 +67,7 @@ const Hero: React.FC = () => {
        
            
             {isOpen && (
-              <div className="absolute bg-white shadow-[0_4px_6px_-2px_rgba(0,0,0,0.3)] rounded-[4px] bottom-0 left-0  flex col items-start p-2 w-[100%]">
+              <div className="absolute bg-white shadow-[0_4px_6px_-2px_rgba(0,0,0,0.3)] rounded-[4px] top-[50px]  left-0 z-[999] flex col items-start p-2 w-[100%]">
                 <div className="w-[100%] flex flex-col">
                   <div className="hover:bg-blue-300 cursor-pointer border-l-transparent hover:border-l-white border-l-4 w-full ">
                     <h6>1</h6>
