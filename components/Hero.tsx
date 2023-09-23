@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
           <br className="flex sm:hidden" /> adipiscing elit.
         </p>
       </div>
-      <div className=" sm:px-16 px-4 ">
+      <div className="relative  sm:px-16 px-4 ">
         <div className="sm:hidden flex justify-between items-center w-[100%] my-8 ">
           <div className="w-[85%] h-[40px]  border-[1px] border-[#F4F4F4] rounded-[8px] pl-3 shadow-[0_1px_2px_0px_rgba(0,0,0,0.06),0_1px_3px_0px_rgba(0,0,0,0.10)]">
             <input className="w-[100%] h-[100%] outline-none  " type="text" />
@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
           
             <div
               onClick={() => setIsOpen((prev) => !prev)}
-              className=" relative cursor-pointer w-[12%] h-[40px]  border-[1px] border-[#F4F4F4] rounded-[8px]  shadow-[0_1px_2px_0px_rgba(0,0,0,0.06),0_1px_3px_0px_rgba(0,0,0,0.10)] flex justify-center items-center"
+              className="  cursor-pointer w-[12%] h-[40px]  border-[1px] border-[#F4F4F4] rounded-[8px]  shadow-[0_1px_2px_0px_rgba(0,0,0,0.06),0_1px_3px_0px_rgba(0,0,0,0.10)] flex justify-center items-center"
             >
               <div>
               <Image src={filter} width={24} height={24} alt="filter" />
@@ -67,19 +67,10 @@ const Hero: React.FC = () => {
        
            
             {isOpen && (
-              <div className="absolute bg-white shadow-[0_4px_6px_-2px_rgba(0,0,0,0.3)] rounded-[4px] top-[50px]  left-0 z-[999] flex col items-start p-2 w-[100%]">
+              <div className="absolute bg-white shadow-[0_4px_6px_-2px_rgba(0,0,0,0.3)] rounded-[4px] bottom-0 mx-4  left-0 z-[999] flex col items-start p-2 w-[100%]">
                 <div className="w-[100%] flex flex-col">
-                  <div className="hover:bg-blue-300 cursor-pointer border-l-transparent hover:border-l-white border-l-4 w-full ">
-                    <h6>1</h6>
-                  </div>
-                  <div className="hover:bg-blue-300 cursor-pointer border-l-transparent hover:border-l-white border-l-4 w-full ">
-                    <h6>1</h6>
-                  </div>
-                  <div className="hover:bg-blue-300 cursor-pointer border-l-transparent hover:border-l-white border-l-4 w-full ">
-                    <h6>1</h6>
-                  </div>
-                  <div className="hover:bg-blue-300 cursor-pointer border-l-transparent hover:border-l-white border-l-4 w-full ">
-                    <h6>1</h6>
+                  <div>
+                    <h6>Option One</h6>
                   </div>
                 </div>
               </div>

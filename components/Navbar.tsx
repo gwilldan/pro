@@ -119,7 +119,7 @@ const Navbar: React.FC = () => {
 
       {navbar && (
         <div
-          className={`fixed right-0 top-[80px] h-full w-[80%] bg-[#f4f4f4] transform transition-transform duration-500 ease-in opacity-100 ${
+          className={`fixed right-0 top-[80px] h-full w-[80%] z-[999] bg-[#f4f4f4] transform transition-transform duration-500 ease-in opacity-100 ${
             navbar ? "translate-x-0" : "translate-x-full opacity-0"
           }`}
         >
