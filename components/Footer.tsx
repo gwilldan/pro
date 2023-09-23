@@ -24,7 +24,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="Right grow justify-between grid grid-cols-3 ">
+          <div className="Right grow justify-between grid sm:grid-cols-3 grid-cols-2 ">
             <div className="NoName ">
               <div className="NoName font-bold">No Name</div>
               <div className="FooterLinks ">
