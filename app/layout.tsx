@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 
 import { Roboto } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import AuthProvider from "@/components/AuthProvider";
 
 const roboto = Roboto({
@@ -29,6 +30,7 @@ export default function RootLayout({
           <Navbar />
 
           {children}
+          <Footer/>
         </body>
       </AuthProvider>
     </html>

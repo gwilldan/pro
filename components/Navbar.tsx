@@ -107,7 +107,10 @@ const Navbar: React.FC = () => {
               <Link href="/submission">Submit Design</Link>
             </Button>
 
-            <div className="md:hidden flex cursor-pointer" onClick={showSidebar}>
+            <div
+              className="md:hidden flex cursor-pointer"
+              onClick={showSidebar}
+            >
               <Image src={menu} width={32} height={32} alt="menu" />
             </div>
           </div>
@@ -123,7 +126,9 @@ const Navbar: React.FC = () => {
           <div className="flex justify-end p-4">
             <button onClick={showSidebar}>Close</button>
           </div>
-          <nav className="px-4"> <ul className="flex flex-col gap-5 text-base text-[#393A32]">
+          <nav className="px-4">
+        
+            <ul className="flex flex-col gap-5 text-base text-[#393A32]">
               <li className=" cursor-pointer ">
                 <Link href="/">Design Tasks</Link>
               </li>
@@ -195,7 +200,8 @@ const Navbar: React.FC = () => {
                   </div>
                 )}
               </div>
-            </ul></nav>
+            </ul>
+          </nav>
         </div>
       )}
     </div>
