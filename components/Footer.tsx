@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="w-full bg-white absolute z-10 shadow-[0_4px_6px_-2px_rgba(0,0,0,0.3)] ">
       <footer className="Footer mx-auto max-w-[1440px] flex flex-col sm:gap-4 sm:px-16 px-4 py-[32px] text-[14px] text-[#393A32]">
-        <div className="Content justify-around gap-12 sm:gap-2 flex flex-wrap ">
+        <div className="Content  gap-12 sm:gap-2 flex flex-wrap ">
           <div className="Left sm:w-96 w-[100%] sm:mr-24">
             <div className="flex flex-col gap-4">
               <Link href="/" className="Logo">
@@ -24,7 +24,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="Right  justify-between grid sm:grid-cols-3 grid-cols-2 ">
+          <div className="Right  justify-between grid sm:grid-cols-3 grid-cols-2 gap-y-2 ">
             <div className="NoName ">
               <div className="NoName font-bold">No Name</div>
               <div className="FooterLinks ">
