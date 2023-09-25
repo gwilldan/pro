@@ -45,7 +45,7 @@ export default function Submission() {
     const inputClass = 'w-full my-1 h-[30px] rounded-md p-2 border-[0.5px] border-black placeholder:text-black placeholder:font-light text-sm'
 
   return (
-    <div className="flex no-scrollbar ">
+    <div className="flex flex-col no-scrollbar ">
         <div className=" mx-auto md:max-w-[1000px] sm:justify-center pt-[150px] ">
 
             <p className=" w-[70%] mx-auto text-center font-extrabold text-3xl md:text-4xl">Submit Your Design</p>
