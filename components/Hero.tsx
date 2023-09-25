@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
 
           <div
             onClick={() => setIsOpen((prev) => !prev)}
-            className="cursor-pointer w-[12%] h-[40px]  border-[1px] border-[#F4F4F4] rounded-[8px]  shadow-[0_1px_2px_0px_rgba(0,0,0,0.06),0_1px_3px_0px_rgba(0,0,0,0.10)] flex justify-center items-center"
+            className="cursor-pointer w-[12%] h-[56px]  border-[1px] border-[#F4F4F4] rounded-[8px]  shadow-[0_1px_2px_0px_rgba(0,0,0,0.06),0_1px_3px_0px_rgba(0,0,0,0.10)] flex justify-center items-center"
           >
             <div>
               <Image src={filter} width={24} height={24} alt="filter" />
