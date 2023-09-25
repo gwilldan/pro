@@ -59,24 +59,13 @@ const Hero: React.FC = () => {
 
           <div
           onClick={() => setIsOpen((prev) => !prev)} 
-            className="  relative cursor-pointer w-[12%] h-[40px]  border-[1px] border-[#F4F4F4] rounded-[8px]  shadow-[0_1px_2px_0px_rgba(0,0,0,0.06),0_1px_3px_0px_rgba(0,0,0,0.10)] flex justify-center items-center"
+            className="cursor-pointer w-[12%] h-[40px]  border-[1px] border-[#F4F4F4] rounded-[8px]  shadow-[0_1px_2px_0px_rgba(0,0,0,0.06),0_1px_3px_0px_rgba(0,0,0,0.10)] flex justify-center items-center"
           >
             <div>
               <Image src={filter} width={24} height={24} alt="filter"   />
             </div>
 
-            {isOpen && (
-              <div className="px-4">
-                {" "}
-                <div className="absolute bg-white shadow-[0_4px_6px_-2px_rgba(0,0,0,0.3)] rounded-[4px] top-0 left-0 z-[999] flex col items-start p-2 w-[100%]">
-                  <div className="w-[100%] flex flex-col">
-                    <div>
-                      <h6>Option One</h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
+           
           </div>
         </div>
         <div className="flex md:hidden">
@@ -101,6 +90,24 @@ const Hero: React.FC = () => {
             </motion.div>
           </motion.div>
         </div>
+        {isOpen && (
+                
+                <div className="w-full flex flex-col">
+                 <div className="h-[40px] w-full flex items-center">
+                  <h6>1</h6>
+                </div>
+                <div className="h-[40px] w-full  flex items-center">
+                  <h6>1</h6>
+                </div>
+                <div className="h-[40px] w-full  flex items-center">
+                  <h6>1</h6>
+                </div>
+                <div className="h-[40px] w-full  flex items-center">
+                  <h6>1</h6>
+                </div>
+                
+              </div>
+                )}
       </div>
       <div className="md:flex hidden">
         <div className="md:px-16 px-6 mt-20">
