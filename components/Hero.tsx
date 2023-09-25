@@ -4,8 +4,11 @@ import * as RxIcons from "react-icons/rx";
 import * as IoIcons from "react-icons/io";
 import * as GoIcons from "react-icons/go";
 import * as PiIcons from "react-icons/pi";
+import * as AiIcons from "react-icons/ai";
 import Search from "./Search";
+import Link from "next/link";
 
+import { Button } from "./buttons/Button";
 import { IconContext } from "react-icons/lib/esm/iconContext";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
@@ -216,6 +219,7 @@ const Hero: React.FC = () => {
           </div>
         </div>
       </div>
+      
     </div>
   );
 };
