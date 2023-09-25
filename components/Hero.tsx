@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="flex md:hidden mb-[48px]">
+        <div className="flex md:hidden ">
           <motion.div>
             <motion.div className="w-[1125px] flex cursor-grab  overflow-hidden">
               <motion.div
@@ -89,38 +89,45 @@ const Hero: React.FC = () => {
           </motion.div>
         </div>
         {isOpen && (
-          <div className="w-full flex flex-col gap-8">
-          
-            <div className="h-[56px] w-full px-4  flex justify-between items-center border-[1px] border-[#F4F4F4] rounded-[8px]  shadow-[0_1px_2px_0px_rgba(0,0,0,0.06),0_1px_3px_0px_rgba(0,0,0,0.10)]">
-              <h6>1</h6>
-             
+          <div className="w-full flex flex-col gap-8 mt-8">
+            <div className="flex flex-col gap-2 ">
+              <h6 className="text-base text-[#393A32]">Category</h6>
+              <div className="h-[56px] w-full px-4  flex justify-between items-center border-[1px] border-[#F4F4F4] rounded-[8px]  shadow-[0_1px_2px_0px_rgba(0,0,0,0.06),0_1px_3px_0px_rgba(0,0,0,0.10)]">
+                <h6>1</h6>
+
                 {!isOpen ? (
                   <PiIcons.PiCaretUpBold />
                 ) : (
                   <PiIcons.PiCaretDownBold />
                 )}
-
+              </div>
             </div>
-            <div className="h-[56px] w-full px-4  flex justify-between items-center border-[1px] border-[#F4F4F4] rounded-[8px]  shadow-[0_1px_2px_0px_rgba(0,0,0,0.06),0_1px_3px_0px_rgba(0,0,0,0.10)]">
-              <h6>1</h6>
-             
+            <div className="flex flex-col gap-2 ">
+              <h6 className="text-base text-[#393A32]">Category</h6>
+              <div className="h-[56px] w-full px-4  flex justify-between items-center border-[1px] border-[#F4F4F4] rounded-[8px]  shadow-[0_1px_2px_0px_rgba(0,0,0,0.06),0_1px_3px_0px_rgba(0,0,0,0.10)]">
+                <h6>1</h6>
+
                 {!isOpen ? (
                   <PiIcons.PiCaretUpBold />
                 ) : (
                   <PiIcons.PiCaretDownBold />
                 )}
-
+              </div>
             </div>
-            <div className="h-[56px] w-full px-4  flex justify-between items-center border-[1px] border-[#F4F4F4] rounded-[8px]  shadow-[0_1px_2px_0px_rgba(0,0,0,0.06),0_1px_3px_0px_rgba(0,0,0,0.10)]">
-              <h6>1</h6>
-             
+            <div className="flex flex-col gap-2 ">
+              <h6 className="text-base text-[#393A32]">Category</h6>
+              <div className="h-[56px] w-full px-4  flex justify-between items-center border-[1px] border-[#F4F4F4] rounded-[8px]  shadow-[0_1px_2px_0px_rgba(0,0,0,0.06),0_1px_3px_0px_rgba(0,0,0,0.10)]">
+                <h6>1</h6>
+
                 {!isOpen ? (
                   <PiIcons.PiCaretUpBold />
                 ) : (
                   <PiIcons.PiCaretDownBold />
                 )}
-
+              </div>
             </div>
+
+       
           </div>
         )}
       </div>
