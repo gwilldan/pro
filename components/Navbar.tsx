@@ -153,16 +153,16 @@ const Navbar: React.FC = () => {
                 {isOpen && (
                 
                 <div className="w-full flex flex-col">
-                <div className="h-[40px] w-full bg-red-500 flex items-center">
+                 <div className="h-[40px] w-full flex items-center">
                   <h6>1</h6>
                 </div>
-                <div className="h-[40px] w-full bg-red-500 flex items-center">
+                <div className="h-[40px] w-full  flex items-center">
                   <h6>1</h6>
                 </div>
-                <div className="h-[40px] w-full bg-red-500 flex items-center">
+                <div className="h-[40px] w-full  flex items-center">
                   <h6>1</h6>
                 </div>
-                <div className="h-[40px] w-full bg-red-500 flex items-center">
+                <div className="h-[40px] w-full  flex items-center">
                   <h6>1</h6>
                 </div>
                 
@@ -185,18 +185,18 @@ const Navbar: React.FC = () => {
              {isOpenDrop && (
             
                     <div className="w-full flex flex-col">
-                      <div className="h-[40px] w-full bg-red-500 flex items-center">
-                        <h6>1</h6>
-                      </div>
-                      <div className="h-[40px] w-full bg-red-500 flex items-center">
-                        <h6>1</h6>
-                      </div>
-                      <div className="h-[40px] w-full bg-red-500 flex items-center">
-                        <h6>1</h6>
-                      </div>
-                      <div className="h-[40px] w-full bg-red-500 flex items-center">
-                        <h6>1</h6>
-                      </div>
+                      <div className="h-[40px] w-full flex items-center">
+                  <h6>1</h6>
+                </div>
+                <div className="h-[40px] w-full  flex items-center">
+                  <h6>1</h6>
+                </div>
+                <div className="h-[40px] w-full  flex items-center">
+                  <h6>1</h6>
+                </div>
+                <div className="h-[40px] w-full  flex items-center">
+                  <h6>1</h6>
+                </div>
                       
                     </div>
                 
