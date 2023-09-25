@@ -138,7 +138,7 @@ const Navbar: React.FC = () => {
               <li className=" cursor-pointer ">
                 <Link href="./Jobs">Job Board</Link>
               </li>
-              <div className="relative cursor-pointer   ">
+              <div className="cursor-pointer   ">
                 <div
                   className="flex items-center gap-1   "
                   onClick={() => setIsOpen((prev) => !prev)}
@@ -151,22 +151,22 @@ const Navbar: React.FC = () => {
                   )}
                 </div>
                 {isOpen && (
-                  <div className="absolute bg-white shadow-[0_4px_6px_-2px_rgba(0,0,0,0.3)] rounded-[4px] top-[54px] left-[-50%]  flex col items-start p-2 w-[200px]">
-                    <div className="w-full flex flex-col">
-                      <div className="hover:bg-blue-300 cursor-pointer border-l-transparent hover:border-l-white border-l-4 w-full ">
-                        <h6>1</h6>
-                      </div>
-                      <div className="hover:bg-blue-300 cursor-pointer border-l-transparent hover:border-l-white border-l-4 w-full ">
-                        <h6>1</h6>
-                      </div>
-                      <div className="hover:bg-blue-300 cursor-pointer border-l-transparent hover:border-l-white border-l-4 w-full ">
-                        <h6>1</h6>
-                      </div>
-                      <div className="hover:bg-blue-300 cursor-pointer border-l-transparent hover:border-l-white border-l-4 w-full ">
-                        <h6>1</h6>
-                      </div>
-                    </div>
-                  </div>
+                
+                <div className="w-full flex flex-col">
+                <div className="h-[40px] w-full bg-red-500 flex items-center">
+                  <h6>1</h6>
+                </div>
+                <div className="h-[40px] w-full bg-red-500 flex items-center">
+                  <h6>1</h6>
+                </div>
+                <div className="h-[40px] w-full bg-red-500 flex items-center">
+                  <h6>1</h6>
+                </div>
+                <div className="h-[40px] w-full bg-red-500 flex items-center">
+                  <h6>1</h6>
+                </div>
+                
+              </div>
                 )}
               </div>
               <div className="cursor-pointer    ">
@@ -185,18 +185,19 @@ const Navbar: React.FC = () => {
              {isOpenDrop && (
             
                     <div className="w-full flex flex-col">
-                      <div className="hover:bg-blue-300 cursor-pointer border-l-transparent hover:border-l-white border-l-4 w-full ">
+                      <div className="h-[40px] w-full bg-red-500 flex items-center">
                         <h6>1</h6>
                       </div>
-                      <div className="hover:bg-blue-300 cursor-pointer border-l-transparent hover:border-l-white border-l-4 w-full ">
+                      <div className="h-[40px] w-full bg-red-500 flex items-center">
                         <h6>1</h6>
                       </div>
-                      <div className="hover:bg-blue-300 cursor-pointer border-l-transparent hover:border-l-white border-l-4 w-full ">
+                      <div className="h-[40px] w-full bg-red-500 flex items-center">
                         <h6>1</h6>
                       </div>
-                      <div className="hover:bg-blue-300 cursor-pointer border-l-transparent hover:border-l-white border-l-4 w-full ">
+                      <div className="h-[40px] w-full bg-red-500 flex items-center">
                         <h6>1</h6>
                       </div>
+                      
                     </div>
                 
                 
