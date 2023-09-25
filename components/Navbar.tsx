@@ -128,7 +128,7 @@ const Navbar: React.FC = () => {
           </div>
           <nav className="px-4">
         
-            <ul className="flex flex-col gap-5 text-base text-[#393A32]">
+            <ul className="flex flex-col gap-5 text-base text-[#393A32]" onClick={showSidebar}>
               <li className=" cursor-pointer ">
                 <Link href="/">Design Tasks</Link>
               </li>

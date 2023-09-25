@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
+  
   const dragConstraints = {
     right: 0,
     left: viewportWidth - contentWidth,
