@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
       </div>
       <div className=" sm:px-16 px-4 ">
         <div className=" sm:hidden flex justify-between items-center w-[100%] my-8 ">
-          <div className="w-[85%] h-[40px]  border-[1px] border-[#F4F4F4] rounded-[8px] pl-3 shadow-[0_1px_2px_0px_rgba(0,0,0,0.06),0_1px_3px_0px_rgba(0,0,0,0.10)]">
+          <div className="w-[85%] h-[56px]  border-[1px] border-[#F4F4F4] rounded-[8px] pl-3 shadow-[0_1px_2px_0px_rgba(0,0,0,0.06),0_1px_3px_0px_rgba(0,0,0,0.10)]">
             <input className="w-[100%] h-[100%] outline-none  " type="text" />
           </div>
 
@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="flex md:hidden">
+        <div className="flex md:hidden mb-[48px]">
           <motion.div>
             <motion.div className="w-[1125px] flex cursor-grab  overflow-hidden">
               <motion.div
