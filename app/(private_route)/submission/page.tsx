@@ -3,6 +3,7 @@ import React, { useState } from "react"
 import {form} from './sub-components/data'
 import {MainInfo, Contributors, Preview } from "./sub-components/index"
 import {motion} from "framer-motion"
+import AuthProfileMenu from "@/components/AuthProfileMenu"
 
 
 export default function Submission() {
@@ -111,6 +112,7 @@ export default function Submission() {
                 </div>
             </div>    
         </div>  
+        <AuthProfileMenu/>
     </div>
   )
 }
