@@ -89,7 +89,7 @@ const Hero: React.FC = () => {
           </motion.div>
         </div>
         {isOpen && (
-          <div className="w-full flex flex-col">
+          <div className="w-full flex flex-col gap-8">
           
             <div className="h-[56px] w-full px-4  flex justify-between items-center border-[1px] border-[#F4F4F4] rounded-[8px]  shadow-[0_1px_2px_0px_rgba(0,0,0,0.06),0_1px_3px_0px_rgba(0,0,0,0.10)]">
               <h6>1</h6>
