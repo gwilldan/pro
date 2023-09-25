@@ -169,7 +169,7 @@ const Navbar: React.FC = () => {
                   </div>
                 )}
               </div>
-              <div className="relative cursor-pointer    ">
+              <div className="cursor-pointer    ">
                 <div
                   className="flex items-center gap-1   "
                   onClick={() => setIsOpenDrop((prev) => !prev)}
@@ -181,8 +181,9 @@ const Navbar: React.FC = () => {
                     <PiIcons.PiCaretUpBold />
                   )}
                 </div>
-                {isOpenDrop && (
-                  <div className="absolute bg-white shadow-[0_4px_6px_-2px_rgba(0,0,0,0.3)] rounded-[4px] top-[54px] left-[-50%]  flex col items-start p-2 w-[200px]">
+         
+             {isOpenDrop && (
+            
                     <div className="w-full flex flex-col">
                       <div className="hover:bg-blue-300 cursor-pointer border-l-transparent hover:border-l-white border-l-4 w-full ">
                         <h6>1</h6>
@@ -197,8 +198,10 @@ const Navbar: React.FC = () => {
                         <h6>1</h6>
                       </div>
                     </div>
-                  </div>
+                
+                
                 )}
+             
               </div>
             </ul>
           </nav>
