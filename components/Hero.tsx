@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  
+
   const dragConstraints = {
     right: 0,
     left: viewportWidth - contentWidth,
@@ -58,14 +58,12 @@ const Hero: React.FC = () => {
           </div>
 
           <div
-          onClick={() => setIsOpen((prev) => !prev)} 
+            onClick={() => setIsOpen((prev) => !prev)}
             className="cursor-pointer w-[12%] h-[40px]  border-[1px] border-[#F4F4F4] rounded-[8px]  shadow-[0_1px_2px_0px_rgba(0,0,0,0.06),0_1px_3px_0px_rgba(0,0,0,0.10)] flex justify-center items-center"
           >
             <div>
-              <Image src={filter} width={24} height={24} alt="filter"   />
+              <Image src={filter} width={24} height={24} alt="filter" />
             </div>
-
-           
           </div>
         </div>
         <div className="flex md:hidden">
@@ -91,23 +89,40 @@ const Hero: React.FC = () => {
           </motion.div>
         </div>
         {isOpen && (
-                
-                <div className="w-full flex flex-col">
-                 <div className="h-[40px] w-full flex items-center">
-                  <h6>1</h6>
-                </div>
-                <div className="h-[40px] w-full  flex items-center">
-                  <h6>1</h6>
-                </div>
-                <div className="h-[40px] w-full  flex items-center">
-                  <h6>1</h6>
-                </div>
-                <div className="h-[40px] w-full  flex items-center">
-                  <h6>1</h6>
-                </div>
-                
-              </div>
+          <div className="w-full flex flex-col">
+          
+            <div className="h-[56px] w-full px-4  flex justify-between items-center border-[1px] border-[#F4F4F4] rounded-[8px]  shadow-[0_1px_2px_0px_rgba(0,0,0,0.06),0_1px_3px_0px_rgba(0,0,0,0.10)]">
+              <h6>1</h6>
+             
+                {!isOpen ? (
+                  <PiIcons.PiCaretUpBold />
+                ) : (
+                  <PiIcons.PiCaretDownBold />
                 )}
+
+            </div>
+            <div className="h-[56px] w-full px-4  flex justify-between items-center border-[1px] border-[#F4F4F4] rounded-[8px]  shadow-[0_1px_2px_0px_rgba(0,0,0,0.06),0_1px_3px_0px_rgba(0,0,0,0.10)]">
+              <h6>1</h6>
+             
+                {!isOpen ? (
+                  <PiIcons.PiCaretUpBold />
+                ) : (
+                  <PiIcons.PiCaretDownBold />
+                )}
+
+            </div>
+            <div className="h-[56px] w-full px-4  flex justify-between items-center border-[1px] border-[#F4F4F4] rounded-[8px]  shadow-[0_1px_2px_0px_rgba(0,0,0,0.06),0_1px_3px_0px_rgba(0,0,0,0.10)]">
+              <h6>1</h6>
+             
+                {!isOpen ? (
+                  <PiIcons.PiCaretUpBold />
+                ) : (
+                  <PiIcons.PiCaretDownBold />
+                )}
+
+            </div>
+          </div>
+        )}
       </div>
       <div className="md:flex hidden">
         <div className="md:px-16 px-6 mt-20">

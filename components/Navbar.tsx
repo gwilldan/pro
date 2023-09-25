@@ -128,15 +128,15 @@ const Navbar: React.FC = () => {
           </div>
           <nav className="px-4">
         
-            <ul className="flex flex-col gap-5 text-base text-[#393A32]" onClick={showSidebar}>
+            <ul className="flex flex-col gap-5 text-base text-[#393A32]" >
               <li className=" cursor-pointer ">
-                <Link href="/">Design Tasks</Link>
+                <Link href="/" onClick={showSidebar}>Design Tasks</Link>
               </li>
               <li className=" cursor-pointer ">
-                <Link href="./casestudies">Casestudies</Link>
+                <Link href="./casestudies" onClick={showSidebar}>Casestudies</Link>
               </li>
               <li className=" cursor-pointer ">
-                <Link href="./Jobs">Job Board</Link>
+                <Link href="./Jobs" onClick={showSidebar}>Job Board</Link>
               </li>
               <div className="cursor-pointer   ">
                 <div
@@ -154,16 +154,16 @@ const Navbar: React.FC = () => {
                 
                 <div className="w-full flex flex-col">
                  <div className="h-[40px] w-full flex items-center">
-                  <h6>1</h6>
+                  <Link href="/" onClick={showSidebar}>1</Link>
                 </div>
                 <div className="h-[40px] w-full  flex items-center">
-                  <h6>1</h6>
+                <Link href="/" onClick={showSidebar}>2</Link>
                 </div>
                 <div className="h-[40px] w-full  flex items-center">
-                  <h6>1</h6>
+                <Link href="/" onClick={showSidebar}>3</Link>
                 </div>
                 <div className="h-[40px] w-full  flex items-center">
-                  <h6>1</h6>
+                 <Link href="/" onClick={showSidebar}>4</Link>
                 </div>
                 
               </div>
@@ -186,16 +186,16 @@ const Navbar: React.FC = () => {
             
                     <div className="w-full flex flex-col">
                       <div className="h-[40px] w-full flex items-center">
-                  <h6>1</h6>
+                      <Link href="/" onClick={showSidebar}>1</Link>
                 </div>
                 <div className="h-[40px] w-full  flex items-center">
-                  <h6>1</h6>
+               <Link href="/" onClick={showSidebar}>2</Link>
                 </div>
                 <div className="h-[40px] w-full  flex items-center">
-                  <h6>1</h6>
+                <Link href="/" onClick={showSidebar}>3</Link>
                 </div>
                 <div className="h-[40px] w-full  flex items-center">
-                  <h6>1</h6>
+                <Link href="/" onClick={showSidebar}>4</Link>
                 </div>
                       
                     </div>
