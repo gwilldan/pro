@@ -2,6 +2,7 @@
 import React, { ChangeEventHandler, FormEventHandler, useState } from "react";
 import Image from "next/image"
 import goggle from "../../../assets/google.png"
+import { signIn, useSession } from 'next-auth/react'
 const Signin = () => {
   const [userInfo, setUserInfo] = useState({
     name: "",
@@ -72,7 +73,7 @@ const Signin = () => {
         </button>
         <button className="w-[100%] flex justify-center gap-[11px] items-center text-lg h-[48px] border-[1px] border-[#181818] text-[#181818] rounded ">
           <Image src={goggle} width={16} height={16} alt="google" />
-      <h5>    Sign Up with Google</h5>
+      <h5>    <button onClick={() => signIn('google')} className="bg-red-500 text-white w-full">Login with Google</button> </h5>
         </button>
       </div>
       <h5 className="sm:mt-8 mt-6 text-center text-base">

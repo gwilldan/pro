@@ -1,6 +1,7 @@
 import startDb from "@/app/lib/db";
 import UserModel from "@/app/models/userModel";
-
+import GoogleProvider from "next-auth/providers/google";
+import GithubProvider from "next-auth/providers/github";
 import NextAuth, { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 
@@ -10,6 +11,14 @@ export const authOptions: NextAuthOptions = {
   },
   providers: [
   
+    GithubProvider({
+      clientId: process.env.GITHUB_ID as string,
+      clientSecret: process.env.GITHUB_SECRET as string,
+  }),
+  GoogleProvider({
+      clientId: process.env.GOOGLE_ID as string ,
+      clientSecret: process.env.GOOGLE_SECRET as string,
+  }),
     CredentialsProvider({
       type: "credentials",
       credentials: {},
