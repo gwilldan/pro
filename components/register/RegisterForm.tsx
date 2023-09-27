@@ -101,6 +101,10 @@ const RegisterForm = () => {
       <Button onClick={handleSubmit(onsubmit)}>
         {isLoading ? "Loading" : "Signup"}
       </Button>
+      <Button onClick={handleSubmit(onsubmit)}>
+        {isLoading ? "Loading" : "Signup"}
+      </Button>
+     
     </>
   );
 };
