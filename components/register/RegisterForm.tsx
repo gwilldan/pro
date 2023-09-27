@@ -102,7 +102,7 @@ const RegisterForm = () => {
         {isLoading ? "Loading" : "Signup"}
       </Button>
       <Button onClick={handleSubmit(onsubmit)}>
-        {isLoading ? "Loading" : "Signup"}
+       Login
       </Button>
      
     </>
