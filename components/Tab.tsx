@@ -1,8 +1,9 @@
 import React, { Fragment } from "react";
 import { Tab } from "@headlessui/react";
 import Register from "./register/Register"
-
+import {useState} from 'react'
 function MyTabs() {
+ 
   return (
     <Tab.Group>
       <Tab.List className="flex justify-between items-center mb-[33px] w-[100%]">
@@ -35,7 +36,7 @@ function MyTabs() {
       </Tab.List>
       <Tab.Panels>
         <Tab.Panel>
-          <Register/>
+        <Register/>
           
         </Tab.Panel>
         <Tab.Panel>
