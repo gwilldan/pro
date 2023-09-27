@@ -102,10 +102,10 @@ const Navbar: React.FC = () => {
               <Button type="button" variant="outline-primary">
                 Get Started
               </Button>
+            
             </div>
-            <Button type="button" variant="primary">
-              <Link href="/submission">Submit Design</Link>
-            </Button>
+              <Modal />
+           
 
             <div
               className="md:hidden flex cursor-pointer"

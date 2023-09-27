@@ -1,15 +1,15 @@
 import React from 'react'
 import FormWrap from "@/components/FormWrap"
-import LoginForm from './LoginForm'
+import RegisterForm from './RegisterForm'
 
-const page = () => {
+const Register = () => {
   return (
     <div>
         <FormWrap>
-            <LoginForm/>
+            <RegisterForm/>
         </FormWrap>
     </div>
   )
 }
 
-export default page
+export default Register

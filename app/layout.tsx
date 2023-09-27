@@ -4,7 +4,8 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import AuthProvider from "@/components/AuthProvider";
+import { ToastContainer } from "@/components/nexttoast";
+import "react-toastify/dist/ReactToastify.css";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -25,14 +26,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <AuthProvider>
-        <body className={roboto.className}>
-          <Navbar />
-
-          {children}
-          <Footer/>
-        </body>
-      </AuthProvider>
+      <body className={roboto.className}>
+        <Navbar />
+        {children}
+        
+        <ToastContainer />
+        <Footer />
+      </body>
     </html>
   );
 }

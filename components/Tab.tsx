@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import { Tab } from "@headlessui/react";
-import Signin from "../app/(guest_route)/auth/Signin";
-import Login from "../app/(guest_route)/auth/Login";
+import Register from "./register/Register"
 
 function MyTabs() {
   return (
@@ -36,10 +35,12 @@ function MyTabs() {
       </Tab.List>
       <Tab.Panels>
         <Tab.Panel>
-          <Signin />
+          <Register/>
+          
         </Tab.Panel>
         <Tab.Panel>
-          <Login/>
+        <Register/>
+          
           
        </Tab.Panel>
       </Tab.Panels>
