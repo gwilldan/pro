@@ -57,7 +57,7 @@ const RegisterForm = () => {
               draggable: true,
               progress: undefined,
               theme: "dark",
-            });;
+            });
           }
           if (callback?.error) {
             toast.error(callback.error);
