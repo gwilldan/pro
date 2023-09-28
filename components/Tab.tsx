@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { Tab } from "@headlessui/react";
 import Register from "./register/Register"
+import Login from "./login/Login"
 import {useState} from 'react'
 function MyTabs() {
  
@@ -40,7 +41,7 @@ function MyTabs() {
           
         </Tab.Panel>
         <Tab.Panel>
-        <Register/>
+        <Login/>
           
           
        </Tab.Panel>

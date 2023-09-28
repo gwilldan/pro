@@ -49,9 +49,7 @@ const LoginForm = () => {
   };
   return (
     <>
-      <h5>yesss</h5>
-      <Button onClick={()=>{}}>Login with google</Button>
-      
+
       <Input
         id="email"
         label="email"

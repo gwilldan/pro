@@ -32,8 +32,8 @@ const Input: React.FC<InputProps> = ({
         placeholder=""
         type={type}
         className={`   className="sm:h-[48px] h-[42px] pl-2 outline-none w-[100%]  border-[1px] border-[#000000] rounded-lg disabled:opacity-70 disabled:cursor-not-allowed ${
-          errors[id] ? "border-rose-400" : "border-slate-400"
-        } ${errors[id] ? "focus:border-rose-400" : "focus:border-slate-400" }`}
+          errors[id] ? "border-rose-400" : "border-#181818"
+        } ${errors[id] ? "focus:border-rose-400" : "focus:border-#181818" }`}
       />
       
     </div>
