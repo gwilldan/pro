@@ -4,7 +4,7 @@ import {FaChevronLeft, FaChevronDown, FaLinkedin, FaTwitter, FaFacebookF} from "
 import {AiOutlineLink } from "react-icons/ai"
 import { useState } from "react"
 import Image from "@/node_modules/next/image"
-import man from "../../../assets/man.jpeg"
+import man from "../../../../assets/man.jpeg"
 import {submissions, contributors } from "./data"
 
 import Scrollcard from "./Scrollcard"
