@@ -28,7 +28,7 @@ const RegisterForm = () => {
   const onsubmit: SubmitHandler<FieldValues> = (data) => {
     setIsLoading(true);
     axios
-      .post('/api/register', data)
+      .post('/api/auth/users', data)
       .then(() => {
         toast.success("Account Created", {
           position: "top-right",

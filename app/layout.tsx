@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-
+import AuthProvider from "@/components/AuthProvider"
 import { Roboto } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -19,6 +19,8 @@ export const metadata: Metadata = {
     "Discover a wide range of design challenges to fuel your creativity. Join our community and take part in exciting projects that sharpen your design skills. Get inspired and showcase your talent",
 };
 
+
+
 export default function RootLayout({
   children,
 }: {
@@ -27,11 +29,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
+        <AuthProvider>
         <Navbar />
         {children}
-        
-        <ToastContainer />
+              <ToastContainer />
         <Footer />
+        </AuthProvider>
+        
       </body>
     </html>
   );
