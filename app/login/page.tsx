@@ -1,13 +1,13 @@
+"use client"
 import React from 'react'
-import FormWrap from "@/components/FormWrap"
-import LoginForm from './LoginForm'
+
+import Modal from '@/components/Modal'
 
 const page = () => {
   return (
     <div>
-        <FormWrap>
-            <LoginForm/>
-        </FormWrap>
+
+ <Modal/>
     </div>
   )
 }

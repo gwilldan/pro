@@ -8,7 +8,7 @@ import axios from "axios";
 import { signIn } from "next-auth/react";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
-import goggle from "../../assets/google.png"
+import goggle from "../../../../assets/google.png";
 import Image from "next/image"
 const RegisterForm = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -48,7 +48,7 @@ const RegisterForm = () => {
         }).then((callback) => {
           if (callback?.ok) {
            
-            router.push("/profile");
+            router.push("/submission");
             router.refresh();
             toast.success("Logged In", {
               position: "top-right",

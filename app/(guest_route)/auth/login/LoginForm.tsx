@@ -7,7 +7,7 @@ import { Button } from "@/components/buttons/Button";
 import { signIn } from "next-auth/react";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
-import goggle from "../../assets/google.png";
+import goggle from "../../../../assets/google.png";
 import Image from "next/image";
 const LoginForm = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -30,7 +30,7 @@ const LoginForm = () => {
     }).then((callback) => {
       setIsLoading(false);
       if (callback?.ok) {
-        router.push("/profile");
+        router.push("/submission");
         router.refresh();
         toast.success("Logged In", {
           position: "top-right",
@@ -72,7 +72,7 @@ const LoginForm = () => {
      
         <button
           onClick={handleSubmit(onsubmit)}
-          className="w-[100%] text-lg h-[48px] bg-[#181818] text-white rounded mb-4"
+          className="w-[100%] text-lg h-[48px] mt-6 bg-[#181818] text-white rounded mb-4"
         >
           {isLoading ? "Loading" : "Login"}
         </button>

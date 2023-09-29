@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Tab } from "@headlessui/react";
-import Register from "./register/Register"
-import Login from "./login/Login"
+import Register from "../app/(guest_route)/auth/register/Register"
+import Login from "../app/(guest_route)/auth/login/Login"
 import {useState} from 'react'
 function MyTabs() {
  

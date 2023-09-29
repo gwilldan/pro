@@ -5,7 +5,7 @@ import { Button } from "./buttons/Button";
 import MyTabs from "./Tab";
 
 export default function Modal(): JSX.Element {
-  let [isOpen, setIsOpen] = useState<boolean>(false);
+  let [isOpen, setIsOpen] = useState<boolean>(true);
 
   function closeModal(): void {
     setIsOpen(false);
@@ -17,9 +17,7 @@ export default function Modal(): JSX.Element {
 
   return (
     <>
-      <Button onClick={openModal} type="button" variant="primary">
-        Submit Design
-      </Button>
+    
 
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
