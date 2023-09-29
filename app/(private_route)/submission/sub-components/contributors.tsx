@@ -3,7 +3,7 @@ import Select from "react-select"
 
 export default function Contributors() {
 
-    const inputClass = 'w-full my-1 rounded-md p-2 border border-zinc-300 placeholder:text-black placeholder:font-light text-sm'
+    const inputClass = 'active:outline-none w-full my-1 rounded-md p-2 border border-zinc-300 placeholder:text-black placeholder:font-light text-sm'
 
     const stages = ["Research", "Coding", "Wireframing", "Deployment", "High fidelity", "Revisit"]
 
@@ -51,11 +51,11 @@ export default function Contributors() {
         }}
 
         >
-        <div className="p-5 shadow-xl">
+        <div className=" py-5 px-2 md:p-5 shadow-xl text-[12px] md:text-base ">
             <p className=" font-light">Add Contributors</p>
 
             <div className=" flex my-2 gap-4">
-                <div className=" w-[30%]">
+                <div className=" w-[40%] md:w-[30%]">
                     <p className=" font-light">Your Role</p>
                     <Select className="my-1 rounded-md border-black" 
                         options = {contributorOptions} 
@@ -63,16 +63,16 @@ export default function Contributors() {
                 </div>
 
                 {/* create select options for this component */}
-                <div className=" w-[70%]">
-                    <p className=" font-light">Contributor's Name</p>
+                <div className="w-[60%] md:w-[70%]">
+                    <p className="font-light">Contributor's Name</p>
                     <input type="text" key="yourRole" 
                     className={`${inputClass}`}
                     />
                 </div>
-            </div>
+            </div> 
 
             <div className=" flex gap-4">
-                <div className=" w-[30%]">
+                <div className="w-[40%] md:w-[30%]">
                     <p className=" font-light">Your Role</p>
                     <Select className="my-1 rounded-md border-black" 
                         options = {urlOptions} 
@@ -80,7 +80,7 @@ export default function Contributors() {
                 </div>
 
                 {/* create select options for this component */}
-                <div className=" w-[70%]">
+                <div className="w-[60%] md:w-[70%]">
                     <p className=" font-light">Comments</p>
                     <input type="text" key="yourRole" 
                     className={`${inputClass} `}
@@ -92,7 +92,7 @@ export default function Contributors() {
 
                     {/* CARD FOR RENDERING STAGES */}
 
-        <div className="my-10">
+        <div className="my-10 text-[12px] md:text-base">
             
             <p className=" font-light"> Select Stages involved</p>
 
@@ -107,7 +107,7 @@ export default function Contributors() {
                             whileTap = {anim.scaleSmall}
                             transition = {anim.theTransition}
                         >
-                            <input className=" rounded-full" value={i} type="checkbox" id={i} />
+                            <input className=" text-[12px} rounded-full" value={i} type="checkbox" id={i} />
                             <label htmlFor={i}>{i}</label>
                         </motion.div> 
                     </>
@@ -117,9 +117,9 @@ export default function Contributors() {
 
                     {/* TEXT AREAS FOR LONG TEXT INPUT */}
         <div>
-            <p className=" font-light">Additional Notes</p>
+            <p className=" font-light text-[12px] md:text-base">Additional Notes</p>
             <textarea id="text" name="text" 
-                className=" rounded-sm p-3 border w-full h-[300px] mt-2"
+                className=" rounded-sm p-3 border w-full h-[300px] mt-2 text-[12px] md:text-base"
                 placeholder="Type your message... Maybe about your experience or what you learnt"
             />
         </div>
