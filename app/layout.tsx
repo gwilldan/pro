@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import AuthProvider from "@/components/AuthProvider"
+
 import { Roboto } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -29,12 +29,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <AuthProvider>
+   
         <Navbar />
         {children}
               <ToastContainer />
         <Footer />
-        </AuthProvider>
+     
         
       </body>
     </html>
