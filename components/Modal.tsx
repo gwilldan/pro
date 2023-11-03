@@ -17,7 +17,10 @@ export default function Modal(): JSX.Element {
 
   return (
     <>
-    
+       <Button type="button" variant="primary" onClick={openModal}>
+              Submit Design
+            </Button>
+
 
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>

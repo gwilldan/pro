@@ -157,7 +157,7 @@ const Hero: React.FC = () => {
             </div>
           </div>
           <div className="">
-            <div className="flex justify-between items-center mt-8 ">
+            <div className="flex justify-between w-[100%] items-center mt-8 ">
               <Search />
 
               <div className="w-[265px] h-[74px] gap-2 sm:flex hidden justify-between flex-col">

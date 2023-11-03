@@ -8,7 +8,6 @@ import menu from "../assets/menu.svg";
 import * as FiIcons from "react-icons/fi";
 import * as PiIcons from "react-icons/pi";
 
-
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenDrop, setIsOpenDrop] = useState(false);
@@ -103,11 +102,9 @@ const Navbar: React.FC = () => {
               <Button type="button" variant="outline-primary">
                 Get Started
               </Button>
-            
             </div>
-         
-           
-
+            <Modal/>
+ 
             <div
               className="md:hidden flex cursor-pointer"
               onClick={showSidebar}
@@ -128,16 +125,21 @@ const Navbar: React.FC = () => {
             <button onClick={showSidebar}>Close</button>
           </div>
           <nav className="px-4">
-        
-            <ul className="flex flex-col gap-5 text-base text-[#393A32]" >
+            <ul className="flex flex-col gap-5 text-base text-[#393A32]">
               <li className=" cursor-pointer ">
-                <Link href="/" onClick={showSidebar}>Design Tasks</Link>
+                <Link href="/" onClick={showSidebar}>
+                  Design Tasks
+                </Link>
               </li>
               <li className=" cursor-pointer ">
-                <Link href="./casestudies" onClick={showSidebar}>Casestudies</Link>
+                <Link href="./casestudies" onClick={showSidebar}>
+                  Casestudies
+                </Link>
               </li>
               <li className=" cursor-pointer ">
-                <Link href="./Jobs" onClick={showSidebar}>Job Board</Link>
+                <Link href="./Jobs" onClick={showSidebar}>
+                  Job Board
+                </Link>
               </li>
               <div className="cursor-pointer   ">
                 <div
@@ -152,22 +154,28 @@ const Navbar: React.FC = () => {
                   )}
                 </div>
                 {isOpen && (
-                
-                <div className="w-full flex flex-col">
-                 <div className="h-[40px] w-full flex items-center">
-                  <Link href="/" onClick={showSidebar}>1</Link>
-                </div>
-                <div className="h-[40px] w-full  flex items-center">
-                <Link href="/" onClick={showSidebar}>2</Link>
-                </div>
-                <div className="h-[40px] w-full  flex items-center">
-                <Link href="/" onClick={showSidebar}>3</Link>
-                </div>
-                <div className="h-[40px] w-full  flex items-center">
-                 <Link href="/" onClick={showSidebar}>4</Link>
-                </div>
-                
-              </div>
+                  <div className="w-full flex flex-col">
+                    <div className="h-[40px] w-full flex items-center">
+                      <Link href="/" onClick={showSidebar}>
+                        1
+                      </Link>
+                    </div>
+                    <div className="h-[40px] w-full  flex items-center">
+                      <Link href="/" onClick={showSidebar}>
+                        2
+                      </Link>
+                    </div>
+                    <div className="h-[40px] w-full  flex items-center">
+                      <Link href="/" onClick={showSidebar}>
+                        3
+                      </Link>
+                    </div>
+                    <div className="h-[40px] w-full  flex items-center">
+                      <Link href="/" onClick={showSidebar}>
+                        4
+                      </Link>
+                    </div>
+                  </div>
                 )}
               </div>
               <div className="cursor-pointer    ">
@@ -182,28 +190,31 @@ const Navbar: React.FC = () => {
                     <PiIcons.PiCaretUpBold />
                   )}
                 </div>
-         
-             {isOpenDrop && (
-            
-                    <div className="w-full flex flex-col">
-                      <div className="h-[40px] w-full flex items-center">
-                      <Link href="/" onClick={showSidebar}>1</Link>
-                </div>
-                <div className="h-[40px] w-full  flex items-center">
-               <Link href="/" onClick={showSidebar}>2</Link>
-                </div>
-                <div className="h-[40px] w-full  flex items-center">
-                <Link href="/" onClick={showSidebar}>3</Link>
-                </div>
-                <div className="h-[40px] w-full  flex items-center">
-                <Link href="/" onClick={showSidebar}>4</Link>
-                </div>
-                      
+
+                {isOpenDrop && (
+                  <div className="w-full flex flex-col">
+                    <div className="h-[40px] w-full flex items-center">
+                      <Link href="/" onClick={showSidebar}>
+                        1
+                      </Link>
                     </div>
-                
-                
+                    <div className="h-[40px] w-full  flex items-center">
+                      <Link href="/" onClick={showSidebar}>
+                        2
+                      </Link>
+                    </div>
+                    <div className="h-[40px] w-full  flex items-center">
+                      <Link href="/" onClick={showSidebar}>
+                        3
+                      </Link>
+                    </div>
+                    <div className="h-[40px] w-full  flex items-center">
+                      <Link href="/" onClick={showSidebar}>
+                        4
+                      </Link>
+                    </div>
+                  </div>
                 )}
-             
               </div>
             </ul>
           </nav>
