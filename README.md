@@ -1,4 +1,4 @@
-# PROJEXW
+# PROJEXA
 
 ## Table of Contents ✨
 
