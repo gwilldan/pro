@@ -37,7 +37,7 @@ npm run dev
 
 # Colors
 
-colors are arranged based on the [Figma Style Guide](https://www.figma.com/file/GJJibKX5bbk6y5RvuPs8aF/Mentor-Me?type=design&node-id=1266-18028&mode=design&t=Ue0EW9TjbNDK1L1R-0)
+colors are arranged based on the [Figma Style Guide](https://www.figma.com/file/ex4zP7mXELqOGIuzndDCWK?type=design)
 
 ```js
 Color     Code
