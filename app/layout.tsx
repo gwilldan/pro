@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ToastContainer } from "@/components/nexttoast";
 import "react-toastify/dist/ReactToastify.css";
+import Providers from "@/redux/Providers";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -19,8 +20,6 @@ export const metadata: Metadata = {
     "Discover a wide range of design challenges to fuel your creativity. Join our community and take part in exciting projects that sharpen your design skills. Get inspired and showcase your talent",
 };
 
-
-
 export default function RootLayout({
   children,
 }: {
@@ -29,13 +28,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
-   
-        <Navbar />
-        {children}
-              <ToastContainer />
-        <Footer />
-     
-        
+        <Providers>
+          <Navbar />
+          {children}
+          <ToastContainer />
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

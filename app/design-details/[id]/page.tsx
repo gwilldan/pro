@@ -20,6 +20,7 @@ import TaskAccordion from "@/components/designDetails.tsx/TaskAccordion";
 import axios from "axios";
 import { DesignProps } from "@/types";
 import { useParams } from "next/navigation";
+import { useGetSpecifiTastQuery } from "@/redux/service/tasksApi";
 
 const socialIcons = [
   {
@@ -75,6 +76,7 @@ const page = () => {
   useEffect(() => {
     fetchDesign();
   }, []);
+  const { data: TaskData } = useGetSpecifiTastQuery(id);
   return (
     <div className="pt-[100px] pb-[100px] flex justify-center items-center">
       <div className="px-[16px] max-w-[1312px] w-full">
@@ -112,7 +114,7 @@ const page = () => {
         </div>
         <div className="max-h-[560px] w-full rounded-[8px] overflow-hidden mb-[16px]">
           <Image
-            src={MainImg}
+            src={TaskData?.content_image}
             alt="Image "
             className="w-full h-full object-cover"
           />
@@ -151,12 +153,7 @@ const page = () => {
           odio nisl vitae. In aliquet pellentesque.
         </h5>
         <h6 className="px-[24px] border-l-[2px] border-l-secondary mb-[24px]">
-          Once upon a time in a bustling city, there lived a talented musician
-          named Emily. With her enchanting voice and soulful melodies, she
-          captivated audiences wherever she performed. Emily had a deep passion
-          for music and spent countless hours honing her skills and writing
-          heartfelt songs. Her dream was to share her music with the world and
-          touch the hearts of people from all walks of life.
+          {TaskData?.content}
         </h6>
         <div className="pt-[56px] pb-[32px] px-[16px] shadow-md rounded-[8px] flex flex-col gap-[32px] mb-[16px] md:grid grid-cols-2 hover:border-secondary duration-200 hover:border-[1px]">
           <div>
@@ -186,7 +183,7 @@ const page = () => {
           <div>
             <h4 className="mb-[16px] font-[600] text-[18px]">Constraints:</h4>
             <div className="flex flex-col gap-[16px]">
-              {TimelineData.map((item, index) => {
+              {TaskData?.constraints.map((item, index) => {
                 return <RequirementItems {...item} key={index} />;
               })}
             </div>
