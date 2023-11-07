@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
           <br className="flex sm:hidden" /> adipiscing elit.
         </p>
       </div>
-      {*/
+      
       <div className=" sm:px-16 px-4 ">
         <div className=" sm:hidden flex justify-between items-center w-[100%] my-8 ">
           <div className="w-[85%] h-[40px]  border-[1px] border-[#F4F4F4] rounded-[8px] pl-3 shadow-[0_1px_2px_0px_rgba(0,0,0,0.06),0_1px_3px_0px_rgba(0,0,0,0.10)]">
@@ -219,7 +219,7 @@ const Hero: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>*/}
+      </div>
       
     </div>
   );
