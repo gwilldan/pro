@@ -11,7 +11,7 @@ export const tasksApi = createApi({
       query: () => "get_all_task",
     }),
     getSpecifiTast: builder.query<ITask, string>({
-      query: (taskId) => `get_submitted_task/${taskId}`,
+      query: (taskId) => `get_task/${taskId}`,
     }),
   }),
 });

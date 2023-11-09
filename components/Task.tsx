@@ -11,6 +11,7 @@ import { useGetTasksQuery } from "@/redux/service/tasksApi";
 const Task = () => {
   const router = useRouter();
   const { data: tasksData, isFetching } = useGetTasksQuery();
+  console.log(tasksData);
   return (
     <div>
       <div className="sm:px-16 px-6  max-w-[1440px] mx-auto">
@@ -65,7 +66,7 @@ const Task = () => {
                         <Button
                           variant="primary"
                           onClick={() => {
-                            router.push(`/design-details/${task.id}`);
+                            router.push(`/design-details/${task.task_id}`);
                           }}
                         >
                           Join challenges
