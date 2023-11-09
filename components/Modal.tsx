@@ -5,7 +5,7 @@ import { Button } from "./buttons/Button";
 import MyTabs from "./Tab";
 
 export default function Modal(): JSX.Element {
-  let [isOpen, setIsOpen] = useState<boolean>(true);
+  let [isOpen, setIsOpen] = useState<boolean>(false);
 
   function closeModal(): void {
     setIsOpen(false);
