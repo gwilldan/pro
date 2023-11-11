@@ -6,35 +6,19 @@ import axios from "axios";
 import { DesignProps } from "../types";
 import { Button } from "./buttons/Button";
 import TaskSkeleton from "./cards/TaskSkeleton";
+import { useGetTasksQuery } from "@/redux/service/tasksApi";
 
 const Task = () => {
   const router = useRouter();
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [data, setData] = useState<DesignProps[]>([]);
-
-  const fetchDesigns = async () => {
-    try {
-      const response = await axios.get("/api/designs");
-      console.log(response);
-      setData(response.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    fetchDesigns();
-  }, []);
-  useEffect(() => {
-    console.log(data);
-  });
+  const { data: tasksData, isFetching } = useGetTasksQuery();
+  console.log(tasksData);
   return (
     <div>
       <div className="sm:px-16 px-6  max-w-[1440px] mx-auto">
         <div className=" flex justify-between flex-wrap  items-start">
-          {data.length < 1 && <TaskSkeleton />}
-          {data.length > 0 &&
-            data.map((task) => {
+          {isFetching && <TaskSkeleton />}
+          {tasksData?.data &&
+            tasksData?.data.map((task) => {
               return (
                 <div className="" key={task.id}>
                   <div
@@ -53,16 +37,16 @@ const Task = () => {
                       {task.title}
                     </h2>
                     <p className="text-[18px] w-[500px] my-6">
-                      {task.shortDescription}
+                      {task.description}
                     </p>
                     <div className="flex items-center gap-8 ">
                       <div className="flex items-center gap-4">
                         <div className="w-[51px] h-[51px] rounded-full bg-black"></div>
                         <div className="">
-                          {/* <h4 className="font-bold text-secondary text-[16px]">
-                          {task.creator}
-                        </h4>
-                        <div className="flex flex-row gap-2 items-center ">
+                          <h4 className="font-bold text-secondary text-[16px]">
+                            {task.creator}
+                          </h4>
+                          {/* <div className="flex flex-row gap-2 items-center ">
                           <h4 className="text-[12px] bg-[#f4f4f4] px-[7px] py-1 rounded-[4px]">
                             {task.tag1}
                           </h4>
@@ -82,7 +66,7 @@ const Task = () => {
                         <Button
                           variant="primary"
                           onClick={() => {
-                            router.push(`/design-details/${task.id}`);
+                            router.push(`/design-details/${task.task_id}`);
                           }}
                         >
                           Join challenges
