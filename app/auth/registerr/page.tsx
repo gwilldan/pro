@@ -1,15 +1,16 @@
 import React from 'react'
 import FormWrap from "@/components/FormWrap"
 import RegisterForm from './RegisterForm'
-
-const Register = () => {
+const page = () => {
   return (
-    <div className='w-full'>
+    <div>
+      <div className='w-full'>
         <FormWrap>
             <RegisterForm/>
         </FormWrap>
     </div>
+    </div>
   )
 }
 
-export default Register
+export default page
