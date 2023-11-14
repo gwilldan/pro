@@ -3,7 +3,8 @@
 import React, { ChangeEventHandler, FormEventHandler, useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
-
+import { loginUser } from "@/context/auth/login";
+import { useAuth } from "@/context/auth/AuthInfo";
 const Login = () => {
   const router = useRouter();
   const [error, setError] = useState("");
@@ -12,16 +13,15 @@ const Login = () => {
     password: "",
   });
   const { email, password } = userInfo;
-
+  const { state, dispatch } = useAuth();
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
-    const res = await signIn("credentials", {
-      email,
-      password,
-      redirect: false,
-    });
-    if (res?.error) return setError(res.error);
-    router.replace("/profile");
+    try {
+      await loginUser(userInfo, dispatch);
+    
+    } catch (error) {
+      setError(error.message);
+    }
   };
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">

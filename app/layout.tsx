@@ -1,13 +1,15 @@
+'use client'; 
+
 import "./globals.css";
 import type { Metadata } from "next";
-
+import { QueryClient, QueryClientProvider } from 'react-query';
 import { Roboto } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ToastContainer } from "@/components/nexttoast";
 import "react-toastify/dist/ReactToastify.css";
 import Providers from "@/redux/Providers";
-
+import AuthProvider from "@/context/auth/AuthInfo";
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["100", "300", "400", "700", "900"],
@@ -25,15 +27,22 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
+  const queryClient = new QueryClient();
+  
   return (
     <html lang="en">
       <body className={roboto.className}>
+      <QueryClientProvider client={queryClient}>
+        <AuthProvider>
         <Providers>
           <Navbar />
           {children}
           <ToastContainer />
           <Footer />
         </Providers>
+        </AuthProvider>
+      </QueryClientProvider>
       </body>
     </html>
   );
