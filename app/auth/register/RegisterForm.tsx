@@ -4,8 +4,7 @@ import React, { useEffect } from "react";
 import { useState} from "react";
 import Input from "@/components/inputs/inputs";
 import { useForm, FieldValues, SubmitHandler } from "react-hook-form";
-import axios from "axios";
-import { signIn } from "next-auth/react";
+
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 import goggle from "@/assets/google.png";
@@ -42,14 +41,7 @@ const RegisterForm = () => {
   };
 }
  
-useEffect(() => {
-  const token = localStorage.getItem("token"); 
-  if(token){
-    verify_token(  dispatch);
-  
-  }
-}
-, []);
+
   return (
     <div className="pt-20">
       
