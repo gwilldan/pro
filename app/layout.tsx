@@ -15,12 +15,12 @@ const roboto = Roboto({
   weight: ["100", "300", "400", "700", "900"],
 });
 
-export const metadata: Metadata = {
-  title:
-    "Explore Design Challenges | Find Creative Challenges to Enhance Your Skills",
-  description:
-    "Discover a wide range of design challenges to fuel your creativity. Join our community and take part in exciting projects that sharpen your design skills. Get inspired and showcase your talent",
-};
+// export const metadata: Metadata = {
+//   title:
+//     "Explore Design Challenges | Find Creative Challenges to Enhance Your Skills",
+//   description:
+//     "Discover a wide range of design challenges to fuel your creativity. Join our community and take part in exciting projects that sharpen your design skills. Get inspired and showcase your talent",
+// };
 
 export default function RootLayout({
   children,
