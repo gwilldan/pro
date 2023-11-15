@@ -19,8 +19,8 @@ const Login = () => {
     try {
       await loginUser(userInfo, dispatch);
     
-    } catch (error) {
-      setError(error.message);
+    } catch (err) {
+      setError(error);
     }
   };
   return (
