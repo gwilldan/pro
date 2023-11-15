@@ -43,7 +43,7 @@ const RegisterForm = () => {
  
 
   return (
-    <div className="pt-20">
+    <div className="">
       
       <Input
         id="firstname"
