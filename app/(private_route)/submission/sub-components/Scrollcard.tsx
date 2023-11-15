@@ -3,7 +3,7 @@ import {about, problems, goals} from "./data"
 import {GrCheckmark} from "react-icons/gr"
 import Image from '@/node_modules/next/image'
 
-import man from "../../../assets/man.jpeg"
+import man from "../../../../assets/man.jpeg"
 
 function Scrollcard() {
 

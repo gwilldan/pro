@@ -112,10 +112,9 @@ const Navbar: React.FC = () => {
               </div>
             </ul>
           </nav>
-          <div>
+          <div className="flex items-center gap-3">
             <div>
               <AuthNavbar />
-
             </div>
 
             <div

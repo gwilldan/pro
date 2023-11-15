@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import { Tab } from "@headlessui/react";
 
-import RegisterForm from "@/app/auth/register/RegisterForm";
-import LoginForm from "@/app/auth/login/LoginForm";
+import RegisterForm from "@/app/(guest_route)/auth/register/RegisterForm";
+import LoginForm from "@/app/(guest_route)/auth/login/LoginForm";
 function MyTabs() {
   return (
     <Tab.Group>
