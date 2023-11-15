@@ -1,5 +1,6 @@
+
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { useState} from "react";
 import Input from "@/components/inputs/inputs";
 import { useForm, FieldValues, SubmitHandler } from "react-hook-form";
@@ -9,6 +10,9 @@ import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 import goggle from "@/assets/google.png";
 import Image from "next/image"
+import { useAuth } from "@/context/auth/AuthInfo";
+import { registerUser } from "@/context/auth/signup";
+
 const RegisterForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const {
@@ -23,54 +27,29 @@ const RegisterForm = () => {
       password: "",
     },
   });
-  
+  const { state , dispatch } = useAuth();
   const router = useRouter();
   const onsubmit: SubmitHandler<FieldValues> = (data) => {
     setIsLoading(true);
-    axios
-      .post('https://projexa.onrender.com/api/auth/signup', data)
-      .then(() => {
-        toast.success("Account Created", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "dark",
-        });
-
-        signIn("credentials", {
-          email: data.email,
-          password: data.password,
-          redirect: false,
-        }).then((callback) => {
-          if (callback?.ok) {
-           
-            router.push("/submission");
-            router.refresh();
-            toast.success("Logged In", {
-              position: "top-right",
-              autoClose: 5000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-              theme: "dark",
-            });
-          }
-          if (callback?.error) {
-            toast.error(callback.error);
-          }
-        });
-      })
-      .catch(() => toast.error("Something went wrong"))
-      .finally(() => {
+    console.log(data)
+    try {
+      registerUser(data, dispatch);
+    } catch (error) {
+      console.log(error);
+      toast.error("Something went wrong");
+    }finally{
         setIsLoading(false);
-      });
   };
+}
+ 
+useEffect(() => {
+  const token = localStorage.getItem("token"); 
+  if(token){
+    verify_token(  dispatch);
+  
+  }
+}
+, []);
   return (
     <div className="pt-20">
       
@@ -112,7 +91,9 @@ const RegisterForm = () => {
       <button onClick={handleSubmit(onsubmit)} className="w-[100%] text-lg mt-6 h-[48px] bg-[#181818] text-white rounded mb-4">
       {isLoading ? "Loading" : "Sign up"}
         </button>
-      <button onClick={()=>{signIn('google')}} className="w-[100%] flex justify-center gap-[11px] items-center text-lg h-[48px] border-[1px] border-[#181818] text-[#181818] rounded ">
+      <button 
+     // onClick={()=>verify_token(state , dispatch)}
+       className="w-[100%] flex justify-center gap-[11px] items-center text-lg h-[48px] border-[1px] border-[#181818] text-[#181818] rounded ">
           <Image src={goggle} width={16} height={16} alt="google" />
       <h5>    Sign Up with Google</h5>
         </button>
