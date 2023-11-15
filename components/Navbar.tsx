@@ -1,38 +1,34 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState , useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "./buttons/Button";
 import Modal from "@/components/Modal";
 import menu from "../assets/menu.svg";
 import * as FiIcons from "react-icons/fi";
 import * as PiIcons from "react-icons/pi";
-import{verify_token} from '@/context/auth/verifyToken'
+import { verify_token } from "@/context/auth/verifyToken";
 import { useAuth } from "@/context/auth/AuthInfo";
 import { useMutation } from "react-query";
-
+import AuthNavbar from "./AuthNavbar";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenDrop, setIsOpenDrop] = useState(false);
   const [navbar, setNavbar] = useState(false);
-  
-  
 
   const showSidebar = () => setNavbar(!navbar);
-  const { state , dispatch } = useAuth();
+  const { state, dispatch } = useAuth();
 
-
-  const mutation = useMutation(() => verify_token( dispatch), {
+  const mutation = useMutation(() => verify_token(dispatch), {
     onError: (error) => {
-        console.log(error);
+      console.log(error);
     },
-});
+  });
 
-useEffect(() => {
+  useEffect(() => {
     mutation.mutate();
-}, [dispatch]);
-
+  }, [dispatch]);
 
   return (
     <div>
@@ -40,7 +36,6 @@ useEffect(() => {
         <nav className="mx-auto max-w-[1440px] flex justify-between items-center sm:px-16 px-4 h-[80px]">
           <Link href="/">
             <h5 className="font-bold text-xl">LOGO</h5>
-           <h1>{state?.email}</h1>  
           </Link>
           <nav className="md:flex hidden ml-48">
             <ul className="flex gap-5 text-base text-[#393A32]">
@@ -117,19 +112,12 @@ useEffect(() => {
               </div>
             </ul>
           </nav>
-          <div className="flex md:gap-4 gap-6 items-center">
-            <div className="md:flex hidden">
-              <Button   type="button" variant="outline-primary">
-                Get Started
-              </Button>
-              <Button onClick = {() => dispatch({type:'LOGOUT'}) }
-              type="button" variant="outline-primary">
-              LogOut
-              </Button>
-            
+          <div>
+            <div>
+              <AuthNavbar />
+
             </div>
-            <Modal/>
- 
+
             <div
               className="md:hidden flex cursor-pointer"
               onClick={showSidebar}

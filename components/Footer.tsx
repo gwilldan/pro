@@ -1,9 +1,8 @@
-import Link from "next/link";
-import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
+
 
 const Footer = () => {
   return (
-    <div className="w-full bg-white  z-10 shadow-[0_4px_6px_-2px_rgba(0,0,0,0.3)]  absolute left-0 bottom-0">
+    <div className="w-full bg-white  z-10 shadow-[0_4px_6px_-2px_rgba(0,0,0,0.3)]  ">
       <footer className="Footer mx-auto max-w-[1440px] flex flex-col sm:gap-4 sm:px-16 px-4 py-[32px] text-[14px] text-[#393A32]">
     
             <div className="Credits items-center gap-8 flex flex-wrap justify-center">
