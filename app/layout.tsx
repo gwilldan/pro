@@ -1,8 +1,7 @@
-
 "use client";
 import "./globals.css";
 import type { Metadata } from "next";
-import { QueryClient, QueryClientProvider } from 'react-query';
+import { QueryClient, QueryClientProvider } from "react-query";
 import { Roboto } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -27,22 +26,21 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-
   const queryClient = new QueryClient();
-  
+
   return (
     <html lang="en">
       <body className={roboto.className}>
-      <QueryClientProvider client={queryClient}>
-        <AuthProvider>
-        <Providers>
-          <Navbar />
-          {children}
-          <ToastContainer />
-          <Footer />
-        </Providers>
-        </AuthProvider>
-      </QueryClientProvider>
+        <QueryClientProvider client={queryClient}>
+          <AuthProvider>
+            <Providers>
+              <Navbar />
+              {children}
+              <ToastContainer />
+              <Footer />
+            </Providers>
+          </AuthProvider>
+        </QueryClientProvider>
       </body>
     </html>
   );

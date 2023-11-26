@@ -1,24 +1,35 @@
-"use client";
-import React, { useEffect, useState } from "react";
+import getAllTasks from "@/lib/getAllTasks";
+import Link from "next/link";
 import * as AiIcons from "react-icons/ai";
-import { useRouter } from "next/navigation";
-import axios from "axios";
-
 import { Button } from "./buttons/Button";
-import TaskSkeleton from "./cards/TaskSkeleton";
-import { useGetTasksQuery } from "@/redux/service/tasksApi";
 
-const Task = () => {
-  const router = useRouter();
-  const { data: tasksData, isFetching } = useGetTasksQuery();
-  console.log(tasksData);
+export default async function TasksPage() {
+  const tasksData: Promise<Task[]> = getAllTasks();
+
+  const tasks = await tasksData;
+
+  const content = (
+    <section>
+      <br />
+      {tasks.map((task) => {
+        return (
+          <>
+            <p key={task.id}>
+              <Link href={`/tasks/${task.task_id}`}>{task.title}</Link>
+            </p>
+            <br />
+          </>
+        );
+      })}
+    </section>
+  );
+
   return (
     <div>
-      <div className="sm:px-16 px-4  max-w-[1440px] mx-auto">
-        <div className="grid sm:grid-cols-2 sm:gap-10 gap-5 grid-col-1 ">
-          {isFetching && <TaskSkeleton />}
-          {tasksData?.data &&
-            tasksData?.data.map((task) => {
+      <div>
+        <div className="sm:px-16 px-4  max-w-[1440px] mx-auto">
+          <div className="grid sm:grid-cols-2 sm:gap-10 gap-5 grid-col-1 ">
+            {tasks.map((task) => {
               return (
                 <div className="" key={task.id}>
                   <div
@@ -57,19 +68,10 @@ const Task = () => {
                         </div>
                       </div>
                       <div className="flex  gap-3 ">
-                        <Button
-                          variant="outline-primary"
-                          onClick={() => console.log("More info btn clicked")}
-                        >
-                          More info
-                        </Button>
-                        <Button
-                          variant="primary"
-                          className="sm:flex hidden"
-                          onClick={() => {
-                            router.push(`/design-details/${task.task_id}`);
-                          }}
-                        >
+                        <Link href={`/tasks/${task.task_id}`}>
+                          <Button variant="outline-primary">More info</Button>
+                        </Link>
+                        <Button variant="primary" className="sm:flex hidden">
                           Join challenges
                         </Button>
                         {/* <Button /> */}
@@ -79,10 +81,9 @@ const Task = () => {
                 </div>
               );
             })}
+          </div>
         </div>
       </div>
     </div>
   );
-};
-
-export default Task;
+}

@@ -1,13 +1,12 @@
 import Hero from "@/components/Hero";
-import Task from "@/components/Task";
+import TasksPage from "@/components/Tasks";
 
 export default function Home() {
   return (
     <div className="overflow-hidden">
       <Hero />
-      <Task/>
-      
 
+      <TasksPage />
     </div>
   );
 }
