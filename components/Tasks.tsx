@@ -2,6 +2,7 @@ import getAllTasks from "@/lib/getAllTasks";
 import Link from "next/link";
 import * as AiIcons from "react-icons/ai";
 import { Button } from "./buttons/Button";
+import Searchh from "./Searchh";
 
 export default async function TasksPage() {
   const tasksData: Promise<Task[]> = getAllTasks();
@@ -28,6 +29,7 @@ export default async function TasksPage() {
     <div>
       <div>
         <div className="sm:px-16 px-4  max-w-[1440px] mx-auto">
+          <Searchh/>
           <div className="grid sm:grid-cols-2 sm:gap-10 gap-5 grid-col-1 ">
             {tasks.map((task) => {
               return (

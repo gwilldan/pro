@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import Searchh from "@/components/Searchh";
 import TasksPage from "@/components/Tasks";
 
 export default function Home() {
@@ -6,7 +7,7 @@ export default function Home() {
     <div className="overflow-hidden">
       <Hero />
 
-      <TasksPage />
+      <Searchh/>
     </div>
   );
 }
