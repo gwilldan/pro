@@ -42,14 +42,6 @@ const RegisterForm = () => {
   };
 }
  
-useEffect(() => {
-  const token = localStorage.getItem("token"); 
-  if(token){
-    verify_token(  dispatch);
-  
-  }
-}
-, []);
   return (
     <div className="pt-20">
       

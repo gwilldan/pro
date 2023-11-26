@@ -119,7 +119,7 @@ useEffect(() => {
           </nav>
           <div className="flex md:gap-4 gap-6 items-center">
             <div className="md:flex hidden">
-              <Button s  type="button" variant="outline-primary">
+              <Button  type="button" variant="outline-primary">
                 Get Started
               </Button>
               <Button onClick = {() => dispatch({type:'LOGOUT'}) }
