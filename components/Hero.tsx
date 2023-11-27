@@ -14,6 +14,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import filter from "../assets/filter.svg";
 import Image from "next/image";
+import Searchh from "./Searchh";
 
 const Hero: React.FC = () => {
   const [contentWidth, setContentWidth] = useState<number>(0);

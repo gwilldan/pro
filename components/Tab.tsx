@@ -1,10 +1,9 @@
 import React, { Fragment } from "react";
 import { Tab } from "@headlessui/react";
 
-
-import {useState} from 'react'
+import RegisterForm from "@/app/(guest_route)/auth/register/RegisterForm";
+import LoginForm from "@/app/(guest_route)/auth/login/LoginForm";
 function MyTabs() {
- 
   return (
     <Tab.Group>
       <Tab.List className="flex justify-between items-center mb-[33px] w-[100%]">
@@ -37,14 +36,11 @@ function MyTabs() {
       </Tab.List>
       <Tab.Panels>
         <Tab.Panel>
-        
-          
+          <RegisterForm />
         </Tab.Panel>
         <Tab.Panel>
-      
-          
-          
-       </Tab.Panel>
+          <LoginForm />
+        </Tab.Panel>
       </Tab.Panels>
     </Tab.Group>
   );
