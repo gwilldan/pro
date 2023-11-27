@@ -1,14 +1,23 @@
+'use client'
+
 import getAllTasks from "@/lib/getAllTasks";
 import Link from "next/link";
 import * as AiIcons from "react-icons/ai";
 import { Button } from "./buttons/Button";
 import Searchh from "./Searchh";
+import { useState, useEffect } from "react";
 
-export default async function TasksPage() {
-  const tasksData: Promise<Task[]> = getAllTasks();
+export default  function TasksPage() {
+  const [tasks, setTasks] = useState([]);
 
-  const tasks = await tasksData;
+  useEffect(() => {
+    const fetchTasks = async () => {
+      const tasksData = await getAllTasks();
+      setTasks(tasksData);
+    };
 
+    fetchTasks();
+  }, []);
   const content = (
     <section>
       <br />

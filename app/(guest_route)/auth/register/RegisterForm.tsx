@@ -41,7 +41,10 @@ const RegisterForm = () => {
   };
 }
  
+<<<<<<< HEAD:app/auth/registerr/RegisterForm.tsx
+=======
 
+>>>>>>> beeae3eed79b7105c0e7bfa75038bca0befd63c2:app/(guest_route)/auth/register/RegisterForm.tsx
   return (
     <div className="">
       
