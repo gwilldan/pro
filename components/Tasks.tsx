@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import getAllTasks from "@/lib/getAllTasks";
 import Link from "next/link";
@@ -7,8 +7,8 @@ import { Button } from "./buttons/Button";
 import Searchh from "./Searchh";
 import { useState, useEffect } from "react";
 
-export default  function TasksPage() {
-  const [tasks, setTasks] = useState([]);
+export default function TasksPage() {
+  const [tasks, setTasks] = useState<Task[]>([]);
 
   useEffect(() => {
     const fetchTasks = async () => {
@@ -38,7 +38,6 @@ export default  function TasksPage() {
     <div>
       <div>
         <div className="sm:px-16 px-4  max-w-[1440px] mx-auto">
-      
           <div className="grid sm:grid-cols-2 sm:gap-10 gap-5 grid-col-1 ">
             {tasks.map((task) => {
               return (
