@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import getAllTasks from "@/lib/getAllTasks";
 import Link from "next/link";
 import * as AiIcons from "react-icons/ai";
@@ -18,7 +19,10 @@ export default function TasksPage(props: taskProps) {
 						{props.tasks.length ? (
 							props.tasks.map((task: any) => {
 								return (
-									<div className="my-5" key={task.id}>
+									<div
+										className="my-5 hover:scale-[1.01] ease-linear duration-200"
+										key={task.id}
+									>
 										<div
 											className={`sm:p-8 p-3 md:max-w-[650px] md:mx-auto xl:p-10 bg-[#ffffff] shadow-[0_32px_64px_-12px_rgba(0,0,0,0.14)] rounded-[18px] w-[100%] h-[350px] sm:h-[350px] md:h-[400px] md:text-[10px] flex flex-col border-[0.5px] ${task.title}`}
 										>
